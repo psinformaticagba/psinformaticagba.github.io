@@ -79,9 +79,35 @@
     <div class="container">
         <h1 class="display-4 fw-bold mb-3">PSInformática</h1>
         <p class="lead mb-4">Soluções completas em TI e Manutenção para sua empresa ou residência.</p>
-        <a href="#planos" class="btn btn-warning btn-lg fw-bold px-4 shadow">Ver Planos de Contrato</a>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#planos" class="btn btn-warning btn-lg fw-bold px-4 shadow">Ver Planos de Contrato</a>
+            <a href="https://wa.me/5583999820876?text=Olá! Gostaria de um orçamento grátis." target="_blank" class="btn btn-outline-light btn-lg px-4">Orçamento Grátis</a>
+        </div>
     </div>
 </header>
+
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <i class="bi bi-lightning-charge text-primary fs-1"></i>
+                <h6 class="mt-2 fw-bold">Resposta Ágil</h6>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-shield-check text-primary fs-1"></i>
+                <h6 class="mt-2 fw-bold">Segurança de Dados</h6>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-geo-alt text-primary fs-1"></i>
+                <h6 class="mt-2 fw-bold">Atendimento Local</h6>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-award text-primary fs-1"></i>
+                <h6 class="mt-2 fw-bold">Suporte Especializado</h6>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="planos" class="container text-center">
     <h2 class="mb-5 fw-bold text-center">Nossos Planos de Contrato</h2>
@@ -150,47 +176,61 @@
 <section id="servicos" class="bg-light">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-pc-display text-primary fs-3 me-3"></i>
-                <div>
-                    <h5>Sistemas e Softwares</h5>
-                    <p class="text-muted">Instalação de Windows/Linux, Programas e Correção de erros.</p>
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-start">
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Sistemas</h5>
+                    <p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-shield-lock text-primary fs-3 me-3"></i>
-                <div>
-                    <h5>Segurança e Servidores</h5>
-                    <p class="text-muted">Configuração de Servidores, Firewall e Antivírus.</p>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Segurança</h5>
+                    <p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-router text-primary fs-3 me-3"></i>
-                <div>
-                    <h5>Redes e Conectividade</h5>
-                    <p class="text-muted">Configuração de Roteadores, Switches e Impressoras.</p>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-router text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Redes Avançadas</h5>
+                    <p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-tools text-primary fs-3 me-3"></i>
-                <div>
-                    <h5>Manutenção Física</h5>
-                    <p class="text-muted">Troca de peças, baterias e reparo em notebooks.</p>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4">
+                    <i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Impressoras</h5>
+                    <p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-headset text-primary fs-3 me-3"></i>
-                <div>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Hardware</h5>
+                    <p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i>
                     <h5>Suporte Ágil</h5>
-                    <p class="text-muted">Suporte remoto e auxílio direto ao usuário.</p>
+                    <p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p>
                 </div>
             </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi bi-calendar-check text-primary fs-3 me-3"></i>
-                <div>
-                    <h5>Manutenção Preventiva</h5>
-                    <p class="text-muted">Atualizações constantes para evitar paradas inesperadas.</p>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4">
+                    <i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Backup e Nuvem</h5>
+                    <p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i>
+                    <h5>Prevenção</h5>
+                    <p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p>
                 </div>
             </div>
         </div>
@@ -229,8 +269,9 @@
                         <i class="bi bi-clock"></i>
                     </div>
                     <div>
-                        <h5 class="mb-1">Horário</h5>
+                        <h5 class="mb-1">Horário de Atendimento</h5>
                         <p class="text-muted mb-0">Segunda a Sexta: 08h às 18h</p>
+                        <p class="text-muted mb-0">Sábado: 08h às 12h</p>
                     </div>
                 </div>
             </div>
