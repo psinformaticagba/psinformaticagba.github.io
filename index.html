@@ -34,11 +34,24 @@
         .card-plan:hover { transform: translateY(-10px); }
         .price-tag { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
         
+        /* Efeito nos Cards de Serviços */
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+            border-color: var(--primary-color);
+            background-color: #fff !important;
+        }
+
         /* Estilo Geral */
         section { padding: 80px 0; }
         .feature-list { font-size: 0.9rem; list-style: none; padding-left: 0; min-height: 160px;}
         .feature-list li { margin-bottom: 8px; }
         .bi-check-circle-fill { color: #28a745; margin-right: 8px; }
+        .server-highlight { color: #0056b3; font-weight: bold; background: #e7f1ff; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; }
         
         .disclaimer-box {
             background-color: #fff3cd;
@@ -54,6 +67,9 @@
         
         .footer-link { text-decoration: none; color: #adb5bd; transition: 0.3s; }
         .footer-link:hover { color: white; }
+
+        .btn-download { background-color: #dc3545; color: white; border-radius: 50px; padding: 5px 20px; font-weight: bold; border: none; transition: 0.3s; }
+        .btn-download:hover { background-color: #a71d2a; color: white; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -65,11 +81,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                 <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
+                        <i class="bi bi-display me-2"></i>Suporte Remoto
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -159,8 +180,8 @@
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
                         <li><i class="bi bi-check-circle-fill"></i>Manutenção Corretiva Total</li>
+                        <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
                         <li><i class="bi bi-check-circle-fill"></i>Troca de Telas/Baterias*</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Reparo em Carcaças</li>
                     </ul>
                     <a href="https://wa.me/5583999820876?text=Olá! Gostaria de contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
                 </div>
@@ -177,8 +198,8 @@
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
                         <li><i class="bi bi-check-circle-fill"></i>Manutenção de Câmeras/CFTV</li>
+                        <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
                         <li><i class="bi bi-check-circle-fill"></i>Configuração de DVR/NVR</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Suporte em Acesso Remoto</li>
                     </ul>
                     <a href="https://wa.me/5583999820876?text=Olá! Gostaria de contratar o Plano Corporate." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
                 </div>
@@ -196,56 +217,56 @@
         <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4 text-start">
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i>
                     <h5>Sistemas</h5>
                     <p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i>
                     <h5>Segurança</h5>
                     <p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-router text-primary fs-3 mb-2 d-block"></i>
                     <h5>Redes Avançadas</h5>
                     <p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4">
+                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card">
                     <i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i>
                     <h5>Impressoras</h5>
                     <p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i>
                     <h5>Hardware</h5>
                     <p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i>
                     <h5>Suporte Ágil</h5>
                     <p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4">
+                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card">
                     <i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i>
                     <h5>Backup e Nuvem</h5>
                     <p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p>
                 </div>
             </div>
             <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
                     <i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i>
                     <h5>Prevenção</h5>
                     <p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p>
@@ -261,7 +282,6 @@
             <div class="col-lg-5">
                 <h2 class="fw-bold mb-4">Fale Conosco</h2>
                 <p class="text-muted mb-5">Atendimento especializado em Guarabira e região. Entre em contato pelos nossos canais oficiais.</p>
-                
                 <div class="d-flex mb-4">
                     <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
                         <i class="bi bi-geo-alt"></i>
@@ -271,7 +291,6 @@
                         <p class="text-muted mb-0">Guarabira, Paraíba - PB</p>
                     </div>
                 </div>
-
                 <div class="d-flex mb-4">
                     <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
                         <i class="bi bi-whatsapp"></i>
@@ -281,7 +300,6 @@
                         <p class="text-muted mb-0">(83) 99982-0876</p>
                     </div>
                 </div>
-
                 <div class="d-flex">
                     <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
                         <i class="bi bi-clock"></i>
@@ -324,7 +342,7 @@
                     <a href="https://wa.me/5583999820876" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a>
                     <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.youtube.com/psinformatica" target="_blank" class="text-white"><i class="bi bi-youtube"></i></a>
-                    <a href="https:/t.me/soarespaullo" target="_blank" class="text-white"><i class="bi bi-telegram"></i></a>
+                    <a href="https://t.me/soarespaullo" target="_blank" class="text-white"><i class="bi bi-telegram"></i></a>
                 </div>
                 <p class="small text-secondary mt-3">Siga-nos para atualizações e novidades.</p>
             </div>
