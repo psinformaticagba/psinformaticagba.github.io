@@ -46,6 +46,15 @@
             background-color: #fff !important;
         }
 
+        /* Depoimentos */
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
         /* Estilo Geral */
         section { padding: 80px 0; }
         .feature-list { font-size: 0.9rem; list-style: none; padding-left: 0; min-height: 160px;}
@@ -85,6 +94,7 @@
                 <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                 <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                     <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
@@ -133,8 +143,8 @@
 <section id="planos" class="container text-center">
     <h2 class="mb-5 fw-bold text-center">Nossos Planos de Contrato</h2>
     <div class="row g-4 justify-content-center text-center">
-        <div class="col-md-3 text-center">
-            <div class="card h-100 card-plan text-center p-4">
+        <div class="col-md-3">
+            <div class="card h-100 card-plan p-4">
                 <div class="card-body">
                     <h3 class="card-title">Básico</h3>
                     <p class="text-muted">Até 3 Equipamentos</p>
@@ -151,8 +161,8 @@
             </div>
         </div>
 
-        <div class="col-md-3 text-center">
-            <div class="card h-100 card-plan text-center p-4 border border-primary border-2">
+        <div class="col-md-3">
+            <div class="card h-100 card-plan p-4 border border-primary border-2">
                 <div class="card-body">
                     <span class="badge bg-primary mb-2 shadow-sm">MAIS POPULAR</span>
                     <h3 class="card-title">Business</h3>
@@ -170,8 +180,8 @@
             </div>
         </div>
 
-        <div class="col-md-3 text-center">
-            <div class="card h-100 card-plan text-center p-4">
+        <div class="col-md-3">
+            <div class="card h-100 card-plan p-4">
                 <div class="card-body">
                     <h3 class="card-title">Premium</h3>
                     <p class="text-muted">Até 10 Equipamentos</p>
@@ -188,8 +198,8 @@
             </div>
         </div>
 
-        <div class="col-md-3 text-center">
-            <div class="card h-100 card-plan text-center p-4">
+        <div class="col-md-3">
+            <div class="card h-100 card-plan p-4">
                 <div class="card-body">
                     <h3 class="card-title">Corporate</h3>
                     <p class="text-muted">Até 15 Equipamentos</p>
@@ -206,7 +216,6 @@
             </div>
         </div>
     </div>
-
     <div class="disclaimer-box shadow-sm">
         <i class="bi bi-info-circle-fill me-2"></i> Importante: Peças de reposição são cobradas à parte.
     </div>
@@ -216,99 +225,68 @@
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4 text-start">
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Sistemas</h5>
-                    <p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i><h5>Sistemas</h5><p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i><h5>Segurança</h5><p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-router text-primary fs-3 mb-2 d-block"></i><h5>Redes Avançadas</h5><p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i><h5>Impressoras</h5><p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i><h5>Hardware</h5><p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i><h5>Suporte Ágil</h5><p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i><h5>Backup e Nuvem</h5><p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i><h5>Prevenção</h5><p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="clientes" class="bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-2">Quem Confia no Nosso Trabalho</h2>
+        <p class="text-muted mb-5">Empresas que contam com a PSInformática para manter sua infraestrutura rodando 100%.</p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="bi bi-building text-primary fs-1 mb-3"></i>
+                    <h5 class="fw-bold">Papelart</h5>
+                    <p class="fst-italic text-muted">"Suporte rápido e eficiente. Desde que fechamos o contrato, nossas paradas por problemas técnicos acabaram."</p>
+                    <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
             </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Segurança</h5>
-                    <p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="bi bi-hospital text-primary fs-1 mb-3"></i>
+                    <h5 class="fw-bold">Toplab</h5>
+                    <p class="fst-italic text-muted">"Excelente atendimento. O gerenciamento dos nossos servidores nos trouxe muita segurança nos dados."</p>
+                    <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
             </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-router text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Redes Avançadas</h5>
-                    <p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card">
-                    <i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Impressoras</h5>
-                    <p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Hardware</h5>
-                    <p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Suporte Ágil</h5>
-                    <p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card">
-                    <i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Backup e Nuvem</h5>
-                    <p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 bg-white rounded shadow-sm h-100 service-card">
-                    <i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i>
-                    <h5>Prevenção</h5>
-                    <p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="bi bi-shop text-primary fs-1 mb-3"></i>
+                    <h5 class="fw-bold">Guarafrutas</h5>
+                    <p class="fst-italic text-muted">"Equipe muito competente. O suporte remoto nos atende em minutos, facilitando muito o dia a dia da loja."</p>
+                    <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contato" class="bg-white">
+<section id="contato" class="bg-light">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-5">
                 <h2 class="fw-bold mb-4">Fale Conosco</h2>
                 <p class="text-muted mb-5">Atendimento especializado em Guarabira e região. Entre em contato pelos nossos canais oficiais.</p>
                 <div class="d-flex mb-4">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
-                        <i class="bi bi-geo-alt"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">Localização</h5>
-                        <p class="text-muted mb-0">Guarabira, Paraíba - PB</p>
-                    </div>
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-geo-alt"></i></div>
+                    <div><h5 class="mb-1">Localização</h5><p class="text-muted mb-0">Guarabira, Paraíba - PB</p></div>
                 </div>
                 <div class="d-flex mb-4">
-                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
-                        <i class="bi bi-whatsapp"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">WhatsApp</h5>
-                        <p class="text-muted mb-0">(83) 99982-0876</p>
-                    </div>
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-whatsapp"></i></div>
+                    <div><h5 class="mb-1">WhatsApp</h5><p class="text-muted mb-0">(83) 99982-0876</p></div>
                 </div>
                 <div class="d-flex">
-                    <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
-                        <i class="bi bi-clock"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">Horário de Atendimento</h5>
-                        <p class="text-muted mb-0">Segunda a Sexta: 08h às 18h</p>
-                        <p class="text-muted mb-0">Sábado: 08h às 12h</p>
-                    </div>
+                    <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-clock"></i></div>
+                    <div><h5 class="mb-1">Horário de Atendimento</h5><p class="text-muted mb-0">Segunda a Sexta: 08h às 18h</p><p class="text-muted mb-0">Sábado: 08h às 12h</p></div>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -344,18 +322,10 @@
                     <a href="https://www.youtube.com/psinformatica" target="_blank" class="text-white"><i class="bi bi-youtube"></i></a>
                     <a href="https://t.me/soarespaullo" target="_blank" class="text-white"><i class="bi bi-telegram"></i></a>
                 </div>
-                <p class="small text-secondary mt-3">Siga-nos para atualizações e novidades.</p>
             </div>
         </div>
         <hr class="border-secondary">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="small text-secondary mb-0">© 2026 PSInformática. Todos os direitos reservados.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="x-small text-muted mb-0" style="font-size: 0.75rem;">Suporte técnico de alto desempenho em Guarabira/PB.</p>
-            </div>
-        </div>
+        <p class="small text-secondary text-center mb-0">© 2026 PSInformática. Todos os direitos reservados. Suporte técnico em Guarabira/PB.</p>
     </div>
 </footer>
 
