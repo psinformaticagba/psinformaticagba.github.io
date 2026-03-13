@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - PSInformática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --dark-blue: #002d5d;
+            --glass-bg: rgba(255, 255, 255, 0.9);
+        }
+        body { background-color: #f0f4f8; font-family: 'Segoe UI', sans-serif; }
+
+        /* --- ESTILOS DA SUA NAVBAR PADRONIZADA --- */
+        .navbar { background-color: var(--dark-blue); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-link { 
+            color: rgba(255, 255, 255, 0.7) !important; /* Cor mais escura/apagada padrão */
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+        .nav-link:hover { color: white !important; } /* Cor branca ao passar o mouse */
+        
+        .nav-link.active { color: rgba(255, 255, 255, 0.7) !important; } /* Mantém a cor apagada no active */
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .btn-download { 
+            background-color: #dc3545; 
+            color: white; 
+            border-radius: 50px; 
+            padding: 5px 20px; 
+            font-weight: bold; 
+            border: none; 
+            transition: 0.3s; 
+        }
+        .btn-download:hover { background-color: #a71d2a; color: white; transform: scale(1.05); }
+
+        /* --- ESTILOS DA PÁGINA DE SERVIÇOS --- */
+        .services-hero {
+            background: linear-gradient(135deg, #0056b3 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            height: 100%;
+            border-bottom: 5px solid transparent;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #e7f1ff 0%, #cce5ff 100%);
+            color: var(--primary-color);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .cta-section {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 60px 0;
+            border-radius: 30px;
+            margin: 80px 0;
+        }
+
+        .btn-cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .footer-link { color: #adb5bd; text-decoration: none; transition: 0.3s; }
+        .footer-link:hover { color: var(--primary-color); padding-left: 5px; }
+        .social-icon-link { color: #adb5bd; transition: 0.3s; }
+        .social-icon-link:hover { color: var(--primary-color); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">PSInformática</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
+		<li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
+                        <i class="bi bi-display me-2"></i>Suporte Remoto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="services-hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Nossos Serviços</h1>
+        <p class="lead opacity-75">Soluções completas em TI para você e sua empresa.</p>
+    </div>
+</section>
+
+<section class="container py-5 mt-4">
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-person-gear"></i></div>
+                <h4 class="fw-bold mb-3">Suporte Técnico</h4>
+                <p class="text-muted">Manutenção preventiva e corretiva de computadores, notebooks e periféricos com rapidez e garantia.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-diagram-3"></i></div>
+                <h4 class="fw-bold mb-3">Redes de Computadores</h4>
+                <p class="text-muted">Instalação, configuração e otimização de redes Wi-Fi e cabeamento estruturado para máxima performance.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-hdd-network"></i></div>
+                <h4 class="fw-bold mb-3">Servidores</h4>
+                <p class="text-muted">Administração e monitoramento de servidores Windows e Linux, garantindo disponibilidade 24/7.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-cloud-check"></i></div>
+                <h4 class="fw-bold mb-3">Backup e Nuvem</h4>
+                <p class="text-muted">Soluções de backup automatizado para proteger os dados vitais da sua empresa contra perdas e ataques.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-headset"></i></div>
+                <h4 class="fw-bold mb-3">Consultoria Especializada</h4>
+                <p class="text-muted">Assessoria técnica para aquisição de novos equipamentos e implementação de melhores práticas de TI.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center">
+                <div class="service-icon mx-auto"><i class="bi bi-shield-check"></i></div>
+                <h4 class="fw-bold mb-3">Segurança Digital</h4>
+                <p class="text-muted">Remoção de malwares, instalação de firewalls e hardening de sistemas para proteger sua privacidade.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section text-center shadow">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Precisa de uma solução personalizada?</h2>
+            <p class="mb-4 opacity-75">Estamos prontos para analisar sua necessidade e apresentar o melhor custo-benefício.</p>
+            <a href="contato.html" class="btn btn-cta">Solicitar Orçamento <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container text-center text-lg-start">
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4">
+                <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
+                <p class="text-secondary small">Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral.</p>
+            </div>
+            <div class="col-lg-4 ps-lg-5">
+                <h5 class="mb-3 text-white">Links Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="footer-link small d-block mb-2">Início</a></li>
+                    <li><a href="sobre.html" class="footer-link small d-block mb-2">Sobre</a></li>
+                    <li><a href="servicos.html" class="footer-link small d-block mb-2">Serviços</a></li>
+                    <li><a href="contato.html" class="footer-link small d-block mb-2">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
+                <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
+                    <a href="https://wa.me/5583999820876" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/psinformatica" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+                    <a href="https://t.me/soarespaullo" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
+                    <a href="https://soarespaullo.github.io" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="small text-secondary mb-0">© 2026 PSInformática. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
