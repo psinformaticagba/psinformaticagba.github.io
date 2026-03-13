@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Suporte - PSInformática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --dark-blue: #002d5d;
+            --secondary-color: #f8f9fa;
+        }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+
+        /* --- ESTILOS DA NAVBAR PADRONIZADA (IGUAL CONTATO) --- */
+        .navbar { background-color: var(--dark-blue); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-link { 
+            color: rgba(255, 255, 255, 0.7) !important; 
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+        .nav-link:hover { color: white !important; }
+        
+        .nav-link.active { color: rgba(255, 255, 255, 0.7) !important; }
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .btn-download { 
+            background-color: #dc3545; 
+            color: white; 
+            border-radius: 50px; 
+            padding: 5px 20px; 
+            font-weight: bold; 
+            border: none; 
+            transition: 0.3s; 
+        }
+        .btn-download:hover { background-color: #a71d2a; color: white; transform: scale(1.05); }
+
+        /* --- FUNDO AZUL (IGUAL A HERO DE CONTATO) --- */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 80px 0; 
+            text-align: center;
+        }
+
+        /* Cards de Planos */
+        .card-plan {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-plan:hover { transform: translateY(-10px); }
+        .price-tag { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
+        .feature-list { font-size: 0.9rem; list-style: none; padding-left: 0; min-height: 160px;}
+        .feature-list li { margin-bottom: 8px; }
+        .bi-check-circle-fill { color: #28a745; margin-right: 8px; }
+        .server-highlight { color: #0056b3; font-weight: bold; background: #e7f1ff; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; }
+
+        /* Tabela Comparativa */
+        .comparison-table thead th {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 20px;
+            border: none;
+        }
+        .comparison-table tbody tr:hover { background-color: #f8f9fa; }
+        .bi-check-lg { color: #28a745; font-size: 1.2rem; font-weight: bold; }
+        .bi-dash { color: #dee2e6; }
+        .visit-count { font-weight: bold; color: var(--primary-color); }
+
+        /* Disclaimer */
+        .disclaimer-box {
+            background-color: #fff3cd;
+            color: #856404;
+            border-left: 5px solid #ffeeba;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* FAQ */
+        .accordion-item { border: none; margin-bottom: 10px; border-radius: 10px !important; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: var(--primary-color); }
+
+        /* Footer */
+        .footer-link { text-decoration: none; color: #adb5bd; transition: 0.3s; }
+        .footer-link:hover { color: var(--primary-color); padding-left: 5px; }
+        .social-icon-link { transition: all 0.3s ease; display: inline-block; color: #adb5bd; text-decoration: none; }
+        .social-icon-link:hover { color: var(--primary-color) !important; transform: scale(1.1) translateY(-3px); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">PSInformática</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link active" href="planos.html">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
+                        <i class="bi bi-display me-2"></i>Suporte Remoto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Nossos Planos de Contrato</h1>
+        <p class="lead">Transparência e foco na disponibilidade da sua infraestrutura.</p>
+    </div>
+</header>
+
+<section class="container py-5">
+    <div class="row g-4 justify-content-center text-center">
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 card-plan p-4">
+                <div class="card-body">
+                    <h3 class="card-title">Básico</h3>
+                    <p class="text-muted">Até 3 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ 150<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i>Suporte Remoto</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Formatação e OS</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Remoção de Vírus</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Instalação de Softwares</li>
+                    </ul>
+                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Básico." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 card-plan p-4 border border-primary border-2">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2 shadow-sm">MAIS POPULAR</span>
+                    <h3 class="card-title">Business</h3>
+                    <p class="text-muted">Até 6 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ 250<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Configuração de Servidores</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Reparo de Redes/Roteadores</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Configuração de Firewall</li>
+                    </ul>
+                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Business." target="_blank" class="btn btn-primary w-100 mt-3 shadow fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 card-plan p-4">
+                <div class="card-body">
+                    <h3 class="card-title">Premium</h3>
+                    <p class="text-muted">Até 10 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ 350<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Manutenção Corretiva Total</li>
+                        <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Troca de Telas/Baterias*</li>
+                    </ul>
+                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 card-plan p-4">
+                <div class="card-body">
+                    <h3 class="card-title">Corporate</h3>
+                    <p class="text-muted">Até 15 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ 500<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Manutenção de Câmeras/CFTV</li>
+                        <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Configuração de DVR/NVR</li>
+                    </ul>
+                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Corporate." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Comparativo Detalhado</h2>
+        <div class="table-responsive shadow-sm rounded-3">
+            <table class="table comparison-table bg-white m-0">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-start">Recursos Inclusos</th>
+                        <th>Básico</th>
+                        <th>Business</th>
+                        <th>Premium</th>
+                        <th>Corporate</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td class="text-start fw-bold">Visitas Técnicas</td>
+                        <td class="visit-count">1 Visita /mês</td>
+                        <td class="visit-count">2 Visitas /mês</td>
+                        <td class="visit-count">4 Visitas /mês</td>
+                        <td class="visit-count">Ilimitado</td>
+                    </tr>
+                    <tr><td class="text-start fw-bold">Suporte Remoto Imediato</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start fw-bold">Gerenciamento Mikrotik/Firewall</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start fw-bold">Backup e Proteção de Dados</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start fw-bold">Manutenção Corretiva</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="disclaimer-box shadow-sm">
+            <i class="bi bi-info-circle-fill me-2"></i> Importante: Peças de reposição são cobradas à parte.
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Dúvidas Frequentes</h2>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="accordion" id="faqPlanos">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Existe fidelidade no contrato?</button>
+                    </h2>
+                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqPlanos">
+                        <div class="accordion-body">Sim, trabalhamos com contratos de 12 meses. Esse período é necessário para estabilizar sua infraestrutura e implementar rotinas preventivas eficazes.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Como funciona o atendimento de urgência?</button>
+                    </h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
+                        <div class="accordion-body">Para situações de parada total da empresa, o atendimento é prioritário. Planos avançados contam com tempos de resposta (SLA) reduzidos para incidentes críticos.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">O que acontece se eu precisar de mais visitas?</button>
+                    </h2>
+                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
+                        <div class="accordion-body">Caso exceda a cota do plano, visitas extras podem ser solicitadas com valor diferenciado para contratantes, ou você pode optar pelo upgrade para o próximo plano.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Posso migrar de plano durante o contrato?</button>
+                    </h2>
+                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
+                        <div class="accordion-body">Sim. O upgrade pode ser feito a qualquer momento se a sua necessidade técnica aumentar, com ajuste proporcional no valor da mensalidade.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container text-center text-lg-start">
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4">
+                <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
+                <p class="text-secondary small">Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral.</p>
+            </div>
+            <div class="col-lg-4 ps-lg-5">
+                <h5 class="mb-3 text-white">Links Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="footer-link small d-block mb-2">Início</a></li>
+                    <li><a href="sobre.html" class="footer-link small d-block mb-2">Sobre</a></li>
+                    <li><a href="servicos.html" class="footer-link small d-block mb-2">Serviços</a></li>
+                    <li><a href="contato.html" class="footer-link small d-block mb-2">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
+                <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
+                    <a href="https://wa.me/5583999820876" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/psinformatica" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+                    <a href="https://t.me/soarespaullo" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
+                    <a href="https://soarespaullo.github.io" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="small text-secondary mb-0">© 2026 PSInformática. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
