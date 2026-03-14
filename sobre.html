@@ -11,7 +11,16 @@
             --primary-color: #0056b3;
             --dark-blue: #002d5d;
         }
-        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Prevenção global de scroll horizontal */
+        html, body { 
+            overflow-x: hidden; 
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
 
         /* --- ESTILOS DA NAVBAR PADRONIZADA --- */
         .navbar { background-color: var(--dark-blue); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
@@ -59,7 +68,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             overflow: hidden;
             background: #fff;
-            max-width: 380px;
+            max-width: 100%; /* Ajustado para não estourar em telas pequenas */
             margin: 0 auto;
         }
 
@@ -106,8 +115,8 @@
         /* Footer Custom */
         .footer-link { color: #adb5bd; text-decoration: none; transition: 0.3s; }
         .footer-link:hover { color: var(--primary-color); padding-left: 5px; }
-        .social-icon-link { color: #adb5bd; transition: 0.3s; }
-        .social-icon-link:hover { color: var(--primary-color); transform: translateY(-3px); }
+        .social-icon-link { color: #adb5bd; transition: 0.3s; display: inline-block; }
+        .social-icon-link:hover { color: var(--primary-color) !important; transform: translateY(-3px); }
         
         .profile-socials a {
             color: #6c757d;
@@ -120,6 +129,9 @@
             color: var(--primary-color);
             transform: scale(1.1);
         }
+
+        /* Ajuste de Respiro para as Sections */
+        section { overflow: hidden; }
     </style>
 </head>
 <body>
@@ -154,61 +166,63 @@
     </div>
 </section>
 
-<section class="container py-5 mt-4">
-    <div class="row g-5 align-items-center">
-        <div class="col-lg-5 text-center">
-            <div class="card profile-card">
-                <div class="img-container">
-                    <img src="https://avatars.githubusercontent.com/u/65426919?v=4" alt="Paulo Soares">
-                </div>
-                
-                <div class="card-body p-4 text-center">
-                    <span class="experience-badge">+5 Anos de Experiência</span>
-                    <h4 class="fw-bold mb-1">Paulo Soares</h4>
-                    <p class="text-primary fw-semibold mb-2 fs-6">Fundador | Especialista em Infraestrutura</p>
-                    
-                    <div class="profile-socials mb-3">
-                        <a href="https://t.me/soarespaullo" target="_blank" title="Telegram"><i class="bi bi-telegram"></i></a>
-                        <a href="https://www.youtube.com/psinformatica" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="https://linkedin.com/in/soarespaullo/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:soarespaullo@proton.me" title="E-mail"><i class="bi bi-envelope-at-fill"></i></a>
-                        <a href="https://soarespaullo.github.io" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+<section class="py-5 mt-4">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 text-center">
+                <div class="card profile-card">
+                    <div class="img-container">
+                        <img src="https://avatars.githubusercontent.com/u/65426919?v=4" alt="Paulo Soares">
                     </div>
+                    
+                    <div class="card-body p-4 text-center">
+                        <span class="experience-badge">+5 Anos de Experiência</span>
+                        <h4 class="fw-bold mb-1">Paulo Soares</h4>
+                        <p class="text-primary fw-semibold mb-2 fs-6">Fundador | Especialista em Infraestrutura</p>
+                        
+                        <div class="profile-socials mb-3">
+                            <a href="https://t.me/soarespaullo" target="_blank" title="Telegram"><i class="bi bi-telegram"></i></a>
+                            <a href="https://www.youtube.com/psinformatica" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="https://linkedin.com/in/soarespaullo/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="mailto:soarespaullo@proton.me" title="E-mail"><i class="bi bi-envelope-at-fill"></i></a>
+                            <a href="https://soarespaullo.github.io" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
 
-                    <p class="text-muted small mb-3">
-                        Graduado em Segurança da Informação e Pós-graduado em Defesa Cibernética e Perícia Forense Computacional.
-                    </p>
-                    <hr>
-                    <div class="d-flex flex-wrap justify-content-center">
-                        <span class="skill-tag">Administrador de Sistemas</span>
-                        <span class="skill-tag">Cibersegurança</span>
-                        <span class="skill-tag">Especialista em Redes</span>
-                        <span class="skill-tag">Backup em Nuvem</span>
+                        <p class="text-muted small mb-3">
+                            Graduado em Segurança da Informação e Pós-graduado em Defesa Cibernética e Perícia Forense Computacional.
+                        </p>
+                        <hr>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <span class="skill-tag">Administrador de Sistemas</span>
+                            <span class="skill-tag">Cibersegurança</span>
+                            <span class="skill-tag">Especialista em Redes</span>
+                            <span class="skill-tag">Backup em Nuvem</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-7">
-            <h2 class="fw-bold text-dark mb-4">Quem Somos</h2>
-            <p class="text-muted fs-5">
-                A <strong>PSInformática</strong> nasceu da necessidade de oferecer um suporte técnico que vai além do básico. Com sede em Guarabira/PB, focamos em transformar a TI de nossos clientes em uma ferramenta estratégica.
-            </p>
-            <p class="text-muted">
-                Nossa expertise abrange desde a manutenção preventiva de hardware até o gerenciamento complexo de servidores e segurança cibernética. Acreditamos que uma infraestrutura estável é a base para o crescimento de qualquer empresa.
-            </p>
+            <div class="col-lg-7">
+                <h2 class="fw-bold text-dark mb-4">Quem Somos</h2>
+                <p class="text-muted fs-5">
+                    A <strong>PSInformática</strong> nasceu da necessidade de oferecer um suporte técnico que vai além do básico. Com sede em Guarabira/PB, focamos em transformar a TI de nossos clientes em uma ferramenta estratégica.
+                </p>
+                <p class="text-muted">
+                    Nossa expertise abrange desde a manutenção preventiva de hardware até o gerenciamento complexo de servidores e segurança cibernética. Acreditamos que uma infraestrutura estável é a base para o crescimento de qualquer empresa.
+                </p>
 
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <div class="value-box">
-                        <h5 class="fw-bold"><i class="bi bi-bullseye text-primary me-2"></i>Missão</h5>
-                        <p class="small text-muted">Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios.</p>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="value-box">
+                            <h5 class="fw-bold"><i class="bi bi-bullseye text-primary me-2"></i>Missão</h5>
+                            <p class="small text-muted">Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="value-box">
-                        <h5 class="fw-bold"><i class="bi bi-shield-lock text-primary me-2"></i>Valores</h5>
-                        <p class="small text-muted">Integridade, transparência e atualização constante frente às ameaças digitais modernas.</p>
+                    <div class="col-md-6">
+                        <div class="value-box">
+                            <h5 class="fw-bold"><i class="bi bi-shield-lock text-primary me-2"></i>Valores</h5>
+                            <p class="small text-muted">Integridade, transparência e atualização constante frente às ameaças digitais modernas.</p>
+                        </div>
                     </div>
                 </div>
             </div>
