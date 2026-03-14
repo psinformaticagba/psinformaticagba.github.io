@@ -14,7 +14,7 @@
         }
         body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
 
-        /* --- ESTILOS DA NAVBAR PADRONIZADA (IGUAL CONTATO) --- */
+        /* --- ESTILOS DA NAVBAR PADRONIZADA --- */
         .navbar { background-color: var(--dark-blue); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .nav-link { 
             color: rgba(255, 255, 255, 0.7) !important; 
@@ -46,7 +46,7 @@
         }
         .btn-download:hover { background-color: #a71d2a; color: white; transform: scale(1.05); }
 
-        /* --- FUNDO AZUL (IGUAL A HERO DE CONTATO) --- */
+        /* --- FUNDO AZUL --- */
         .page-header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
             color: white;
@@ -132,7 +132,7 @@
 <header class="page-header">
     <div class="container">
         <h1 class="display-4 fw-bold">Nossos Planos de Contrato</h1>
-        <p class="lead">Transparência e foco na disponibilidade da sua infraestrutura.</p>
+        <p class="lead opacity-75">Transparência e foco na disponibilidade da sua infraestrutura.</p>
     </div>
 </header>
 
@@ -219,26 +219,32 @@
         <div class="table-responsive shadow-sm rounded-3">
             <table class="table comparison-table bg-white m-0">
                 <thead>
-                    <tr class="text-center">
-                        <th class="text-start">Recursos Inclusos</th>
+                    <tr class="text-center align-middle">
+                        <th class="text-start">Recursos e Serviços</th>
                         <th>Básico</th>
                         <th>Business</th>
                         <th>Premium</th>
                         <th>Corporate</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center align-middle">
                     <tr>
-                        <td class="text-start fw-bold">Visitas Técnicas</td>
+                        <td class="text-start fw-bold">Visitas Técnicas Presenciais</td>
                         <td class="visit-count">1 Visita /mês</td>
                         <td class="visit-count">2 Visitas /mês</td>
                         <td class="visit-count">4 Visitas /mês</td>
                         <td class="visit-count">Ilimitado</td>
                     </tr>
-                    <tr><td class="text-start fw-bold">Suporte Remoto Imediato</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start fw-bold">Gerenciamento Mikrotik/Firewall</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start fw-bold">Backup e Proteção de Dados</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start fw-bold">Manutenção Corretiva</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Suporte Remoto Imediato</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Formatação e Reinstalação de Sistemas</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Instalação de Programas e Drivers</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Limpeza Preventiva (Física e Lógica)</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Gerenciamento Mikrotik / Firewall</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Configuração de Impressoras e Periféricos</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Backup e Proteção de Dados</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Gestão de Servidores (Windows/Linux)</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Suporte a Sistemas de Câmeras (CFTV)</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    <tr><td class="text-start">Consultoria para Compra de Hardware</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
                 </tbody>
             </table>
         </div>
@@ -318,7 +324,7 @@
             </div>
         </div>
         <hr class="border-secondary">
-        <p class="small text-secondary mb-0">© 2026 PSInformática. Todos os direitos reservados.</p>
+        <p class="small text-secondary mb-0 text-lg-start">© 2026 PSInformática. Todos os direitos reservados.</p>
     </div>
 </footer>
 
