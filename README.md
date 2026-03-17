@@ -4,14 +4,22 @@ Este é o repositório do site institucional da **PSInformática**, uma empresa 
 
 O projeto foi desenvolvido com foco em um design limpo, leve e responsivo, garantindo que os clientes possam solicitar orçamentos e visualizar planos de serviços tanto no computador quanto no celular.
 
+## 📸 Demonstração do Projeto
+
+Aqui você pode ver como o site se comporta em diferentes dispositivos:
+
+| Desktop (PC) | Mobile (Celular) |
+| :---: | :---: |
+| <img src="screenshots/desktop.png" width="500" alt="Preview Desktop"> | <img src="screenshots/mobile.png" width="180" alt="Preview Mobile"> |
+
 ## 🚀 Funcionalidades
 
 * **Página Inicial:** Banner interativo com serviços principais (Cibersegurança, Manutenção, Suporte).
 * **Gestão de Planos:** Exibição clara de planos Básico, Business e Premium.
 * **Suporte Remoto:** Link direto para download de ferramentas de acesso remoto (RustDesk).
 * **Controle de Serviços:** Estrutura para acompanhamento de ordens de serviço.
-* **Responsividade:** Interface adaptável para qualquer tamanho de tela via Bootstrap.
-* **SEO & Social:** Meta tags configuradas para compartilhamento bonito em redes sociais (WhatsApp, Instagram, etc.).
+* **Responsividade:** Interface adaptável para qualquer tamanho de tela via Bootstrap 5.
+* **SEO & Social:** Meta tags configuradas (Open Graph e Twitter Cards) para compartilhamento otimizado.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -25,9 +33,11 @@ O projeto foi desenvolvido com foco em um design limpo, leve e responsivo, garan
 
 ```text
 /
+├── screenshots/    # Capturas de tela para documentação
 ├── css/            # Arquivos de estilo (global.css, main.css, bootstrap.min.css)
 ├── js/             # Scripts (bootstrap.bundle.min.js)
-├── img/            # Imagens e ícones do site
+├── img/            # Imagens e ativos do site
+│   └── favicon/    # Conjunto completo de ícones e manifesto
 ├── index.html      # Página principal
 ├── planos.html     # Detalhamento dos planos de serviço
 ├── contato.html    # Formulário e canais de atendimento
