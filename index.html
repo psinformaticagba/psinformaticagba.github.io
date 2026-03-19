@@ -1,312 +1,213 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSInformática - Planos de Suporte e Manutenção</title>
+---
+layout: default
+title: "PSInformática - Planos de Suporte e Manutenção"
+---
 
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-
-    <meta name="description" content="Soluções completas em TI, manutenção de equipamentos e suporte especializado.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://psinformaticagba.github.io/">
-    <meta property="og:title" content="PSInformática - Suporte e Manutenção Técnica">
-    <meta property="og:description" content="Soluções completas em TI e Manutenção. Suporte ágil, segurança de dados e planos de contrato sob medida para o seu negócio.">
-    <meta property="og:image" content="https://psinformaticagba.github.io/img/banner-tecnologia.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://psinformaticagba.github.io/">
-    <meta property="twitter:title" content="PSInformática - Suporte e Manutenção Técnica">
-    <meta property="twitter:description" content="Soluções ágeis em TI para sua empresa ou residência.">
-    <meta property="twitter:image" content="https://psinformaticagba.github.io/img/banner-tecnologia.jpg">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="main-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">PSInformática</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
-                            <i class="bi bi-display me-2"></i>Suporte Remoto
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('img/banner-seguranca.jpg')">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h2 class="fw-bold">Cibersegurança e Redes</h2>
-                    <p>Configuração de Firewall, VPN e gestão de servidores para sua empresa.</p>
-                    <a href="servicos.html" class="btn btn-primary px-4">Saiba Mais</a>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('img/banner-manutencao.jpg')">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h2 class="fw-bold">Manutenção Especializada</h2>
-                    <p>Upgrades de hardware e manutenção preventiva em computadores e notebooks.</p>
-                    <a href="planos.html" class="btn btn-warning px-4 fw-bold">Ver Planos</a>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('img/banner-suporte.jpg')">
-                <div class="carousel-overlay"></div>
-                <div class="carousel-caption">
-                    <h2 class="fw-bold">Suporte Remoto Imediato</h2>
-                    <p>Atendimento ágil para resolver seus problemas de software sem sair de casa.</p>
-                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-danger px-4">Baixar RustDesk</a>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
     </div>
-
-    <header id="home" class="header-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Sua Empresa em Boas Mãos</h1>
-            <p class="lead mb-4">Soluções completas em TI e Manutenção para sua empresa ou residência.</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="planos.html" class="btn btn-warning btn-lg fw-bold px-4 shadow">Ver Planos de Contrato</a>
-                <a href="https://wa.me/5583999820876?text=Olá! Gostaria de um orçamento grátis." target="_blank" class="btn btn-outline-light btn-lg px-4">Orçamento Grátis</a>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('{{ '/assets/img/banner-seguranca.jpg' | relative_url }}')">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption">
+                <h2 class="fw-bold">Cibersegurança e Redes</h2>
+                <p>Configuração de Firewall, VPN e gestão de servidores para sua empresa.</p>
+                <a href="{{ '/servicos.html' | relative_url }}" class="btn btn-primary px-4">Saiba Mais</a>
             </div>
         </div>
-    </header>
-
-    <div class="container stats-bridge">
-        <div class="row text-center g-4">
-            <div class="col-6 col-md-3">
-                <i class="bi bi-lightning-charge text-primary fs-1"></i>
-                <h6 class="mt-2 fw-bold">Resposta Ágil</h6>
+        <div class="carousel-item" style="background-image: url('{{ '/assets/img/banner-manutencao.jpg' | relative_url }}')">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption">
+                <h2 class="fw-bold">Manutenção Especializada</h2>
+                <p>Upgrades de hardware e manutenção preventiva em computadores e notebooks.</p>
+                <a href="{{ '/planos.html' | relative_url }}" class="btn btn-warning px-4 fw-bold">Ver Planos</a>
             </div>
-            <div class="col-6 col-md-3">
-                <i class="bi bi-shield-check text-primary fs-1"></i>
-                <h6 class="mt-2 fw-bold">Segurança de Dados</h6>
-            </div>
-            <div class="col-6 col-md-3">
-                <i class="bi bi-geo-alt text-primary fs-1"></i>
-                <h6 class="mt-2 fw-bold">Atendimento Local</h6>
-            </div>
-            <div class="col-6 col-md-3">
-                <i class="bi bi-award text-primary fs-1"></i>
-                <h6 class="mt-2 fw-bold">Suporte Especializado</h6>
+        </div>
+        <div class="carousel-item" style="background-image: url('{{ '/assets/img/banner-suporte.jpg' | relative_url }}')">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption">
+                <h2 class="fw-bold">Suporte Remoto Imediato</h2>
+                <p>Atendimento ágil para resolver seus problemas de software sem sair de casa.</p>
+                <a href="{{ site.url_suporte_remoto }}" target="_blank" class="btn btn-danger px-4">Baixar Suporte</a>
             </div>
         </div>
     </div>
-
-    <section id="planos" class="container text-center">
-        <h2 class="mb-5 fw-bold text-center">Nossos Planos de Contrato</h2>
-        <div class="row g-4 justify-content-center text-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 card-plan p-4">
-                    <div class="card-body">
-                        <h3 class="card-title">Básico</h3>
-                        <p class="text-muted">Até 3 Equipamentos</p>
-                        <div class="price-tag mb-3">R$ 150<small class="fs-6">/mês</small></div>
-                        <hr>
-                        <ul class="feature-list text-start">
-                            <li><i class="bi bi-check-circle-fill"></i>Suporte Remoto</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Formatação e OS</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Remoção de Vírus</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Instalação de Softwares</li>
-                        </ul>
-                        <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Básico." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 card-plan p-4 border border-primary border-2">
-                    <div class="card-body">
-                        <span class="badge bg-primary mb-2 shadow-sm">MAIS POPULAR</span>
-                        <h3 class="card-title">Business</h3>
-                        <p class="text-muted">Até 6 Equipamentos</p>
-                        <div class="price-tag mb-3">R$ 250<small class="fs-6">/mês</small></div>
-                        <hr>
-                        <ul class="feature-list text-start">
-                            <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
-                            <li><i class="bi bi-check-circle-fill"></i>Configuração de Servidores</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Reparo de Redes/Roteadores</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Configuração de Firewall</li>
-                        </ul>
-                        <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Business." target="_blank" class="btn btn-primary w-100 mt-3 shadow fw-bold">Contratar Agora</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 card-plan p-4">
-                    <div class="card-body">
-                        <h3 class="card-title">Premium</h3>
-                        <p class="text-muted">Até 10 Equipamentos</p>
-                        <div class="price-tag mb-3">R$ 350<small class="fs-6">/mês</small></div>
-                        <hr>
-                        <ul class="feature-list text-start">
-                            <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
-                            <li><i class="bi bi-check-circle-fill"></i>Manutenção Corretiva Total</li>
-                            <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i>Troca de Telas/Baterias*</li>
-                        </ul>
-                        <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-5">
-            <a href="planos.html" class="btn btn-primary btn-lg px-5 shadow fw-bold">
-                <i class="bi bi-plus-circle me-2"></i>Ver Todos os Planos
-            </a>
-        </div>
-
-        <div class="disclaimer-box shadow-sm">
-            <i class="bi bi-info-circle-fill me-2"></i> Importante: Peças de reposição são cobradas à parte.
-        </div>
-    </section>
-
-    <section id="servicos" class="bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 text-start">
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i><h5>Sistemas</h5><p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i><h5>Segurança</h5><p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-router text-primary fs-3 mb-2 d-block"></i><h5>Redes Avançadas</h5><p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i><h5>Impressoras</h5><p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i><h5>Hardware</h5><p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i><h5>Suporte Ágil</h5><p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i><h5>Backup e Nuvem</h5><p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p></div></div>
-                <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i><h5>Prevenção</h5><p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="clientes" class="bg-white">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-2">Quem Confia no Nosso Trabalho</h2>
-            <p class="text-muted mb-5">Empresas que contam com a PSInformática para manter sua infraestrutura rodando 100%.</p>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <i class="bi bi-building text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Papelart</h5>
-                        <p class="fst-italic text-muted">"Suporte rápido e eficiente. Desde que fechamos o contrato, nossas paradas por problemas técnicos acabaram."</p>
-                        <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <i class="bi bi-hospital text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Toplab</h5>
-                        <p class="fst-italic text-muted">"Excelente atendimento. O gerenciamento dos nossos servidores nos trouxe muita segurança nos dados."</p>
-                        <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <i class="bi bi-shop text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Guarafrutas</h5>
-                        <p class="fst-italic text-muted">"Equipe muito competente. O suporte remoto nos atende em minutos, facilitando muito o dia a dia da loja."</p>
-                        <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="bg-light">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <h2 class="fw-bold mb-4">Fale Conosco</h2>
-                    <p class="text-muted mb-5">Atendimento especializado em Guarabira e região. Entre em contato pelos nossos canais oficiais.</p>
-                    <div class="d-flex mb-4">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-geo-alt"></i></div>
-                        <div><h5 class="mb-1">Localização</h5><p class="text-muted mb-0">Guarabira, Paraíba - PB</p></div>
-                    </div>
-                    <div class="d-flex mb-4">
-                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-whatsapp"></i></div>
-                        <div><h5 class="mb-1">WhatsApp</h5><p class="text-muted mb-0">(83) 99982-0876</p></div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-clock"></i></div>
-                        <div><h5 class="mb-1">Horário de Atendimento</h5><p class="text-muted mb-0">Segunda a Sexta: 08h às 18h</p><p class="text-muted mb-0">Sábado: 08h às 12h</p></div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="card border-0 shadow-sm overflow-hidden h-100" style="border-radius: 20px;">
-                        <img src="img/tecnologia.jpg" alt="Tecnologia" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container text-center text-lg-start">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-4">
-                    <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
-                    <p class="text-secondary small">Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral.</p>
-                </div>
-                <div class="col-lg-4 ps-lg-5">
-                    <h5 class="mb-3 text-white">Links Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link small d-block mb-2">Início</a></li>
-                        <li><a href="sobre.html" class="footer-link small d-block mb-2">Sobre</a></li>
-                        <li><a href="servicos.html" class="footer-link small d-block mb-2">Serviços</a></li>
-                        <li><a href="planos.html" class="footer-link small d-block mb-2">Planos</a></li>
-                        <li><a href="contato.html" class="footer-link small d-block mb-2">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
-                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
-                        <a href="https://wa.me/5583999820876" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://www.youtube.com/psinformatica" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
-                        <a href="https://t.me/soarespaullo" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
-                        <a href="https://soarespaullo.github.io" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary">
-            <p class="small text-secondary mb-0">© 2026 PSInformática. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
 </div>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<header id="home" class="header-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Sua Empresa em Boas Mãos</h1>
+        <p class="lead mb-4">Soluções completas em TI e Manutenção para sua empresa ou residência.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{{ '/planos.html' | relative_url }}" class="btn btn-warning btn-lg fw-bold px-4 shadow">Ver Planos de Contrato</a>
+            <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Gostaria de um orçamento grátis." target="_blank" class="btn btn-outline-light btn-lg px-4">Orçamento Grátis</a>
+        </div>
+    </div>
+</header>
+
+<div class="container stats-bridge">
+    <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+            <i class="bi bi-lightning-charge text-primary fs-1"></i>
+            <h6 class="mt-2 fw-bold">Resposta Ágil</h6>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-shield-check text-primary fs-1"></i>
+            <h6 class="mt-2 fw-bold">Segurança de Dados</h6>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-geo-alt text-primary fs-1"></i>
+            <h6 class="mt-2 fw-bold">Atendimento Local</h6>
+        </div>
+        <div class="col-6 col-md-3">
+            <i class="bi bi-award text-primary fs-1"></i>
+            <h6 class="mt-2 fw-bold">Suporte Especializado</h6>
+        </div>
+    </div>
+</div>
+
+<section id="planos" class="container text-center">
+    <h2 class="mb-5 fw-bold">Nossos Planos de Contrato</h2>
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-plan p-4">
+                <div class="card-body">
+                    <h3 class="card-title">Básico</h3>
+                    <p class="text-muted">Até 3 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_basico }}<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i>Suporte Remoto</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Formatação e OS</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Remoção de Vírus</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Instalação de Softwares</li>
+                    </ul>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Básico." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-plan p-4 border border-primary border-2">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2 shadow-sm">MAIS POPULAR</span>
+                    <h3 class="card-title">Business</h3>
+                    <p class="text-muted">Até 6 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_business }}<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Configuração de Servidores</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Reparo de Redes/Roteadores</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Configuração de Firewall</li>
+                    </ul>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Business." target="_blank" class="btn btn-primary w-100 mt-3 shadow fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-plan p-4">
+                <div class="card-body">
+                    <h3 class="card-title">Premium</h3>
+                    <p class="text-muted">Até 10 Equipamentos</p>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_premium }}<small class="fs-6">/mês</small></div>
+                    <hr>
+                    <ul class="feature-list text-start">
+                        <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Manutenção Corretiva Total</li>
+                        <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i>Troca de Telas/Baterias*</li>
+                    </ul>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <a href="{{ '/planos.html' | relative_url }}" class="btn btn-primary btn-lg px-5 shadow fw-bold">
+            <i class="bi bi-plus-circle me-2"></i>Ver Todos os Planos
+        </a>
+    </div>
+
+    <div class="disclaimer-box shadow-sm">
+        <i class="bi bi-info-circle-fill me-2"></i> {{ site.disclaimer_pecas }}
+    </div>
+</section>
+
+<section id="servicos" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 text-start">
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i><h5>Sistemas</h5><p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i><h5>Segurança</h5><p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-router text-primary fs-3 mb-2 d-block"></i><h5>Redes Avançadas</h5><p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i><h5>Impressoras</h5><p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i><h5>Hardware</h5><p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i><h5>Suporte Ágil</h5><p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i><h5>Backup e Nuvem</h5><p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p></div></div>
+            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i><h5>Prevenção</h5><p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="clientes" class="bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-2">Quem Confia no Nosso Trabalho</h2>
+        <p class="text-muted mb-5">Empresas que contam com a {{ site.title }} para manter sua infraestrutura rodando 100%.</p>
+        <div class="row g-4">
+            {% for cliente in site.data_clientes %}
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="bi bi-{{ cliente.icone }} text-primary fs-1 mb-3"></i>
+                    <h5 class="fw-bold">{{ cliente.nome }}</h5>
+                    <p class="fst-italic text-muted">"{{ cliente.depoimento }}"</p>
+                    <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="bg-light">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-4">Fale Conosco</h2>
+                <p class="text-muted mb-5">Atendimento especializado em {{ site.cidade }} e região.</p>
+                <div class="d-flex mb-4">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-geo-alt"></i></div>
+                    <div><h5 class="mb-1">Localização</h5><p class="text-muted mb-0">{{ site.cidade }}, {{ site.estado }}</p></div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-whatsapp"></i></div>
+                    <div><h5 class="mb-1">WhatsApp</h5><p class="text-muted mb-0">{{ site.whatsapp_formatado }}</p></div>
+                </div>
+                <div class="d-flex">
+                    <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-clock"></i></div>
+                    <div>
+                        <h5 class="mb-1">Horário de Atendimento</h5>
+                        <p class="text-muted mb-0">{{ site.horario_semana }}</p>
+                        <p class="text-muted mb-0">{{ site.horario_sabado }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm overflow-hidden h-100" style="border-radius: 20px;">
+                    <img src="{{ '/assets/img/tecnologia.jpg' | relative_url }}" alt="Tecnologia" class="img-fluid h-100" style="object-fit: cover; min-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - PSInformática</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">PSInformática</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
-                <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
-                        <i class="bi bi-display me-2"></i>Suporte Remoto
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+---
+layout: default
+title: "Sobre Nós - PSInformática"
+---
 
 <section class="about-hero text-center">
     <div class="container">
@@ -49,31 +16,30 @@
             <div class="col-lg-5 text-center">
                 <div class="card profile-card">
                     <div class="img-container">
-                        <img src="img/perfil.jpg" alt="Paulo Soares">
+                        <img src="{{ '/assets/img/perfil.jpg' | relative_url }}" alt="{{ site.autor_nome }}">
                     </div>
                     
                     <div class="card-body p-4 text-center">
-                        <span class="experience-badge">+8 Anos de Experiência</span>
-                        <h4 class="fw-bold mb-1">Paulo Soares</h4>
-                        <p class="text-primary fw-semibold mb-2 fs-6">Fundador | Especialista em Infraestrutura</p>
+                        <span class="experience-badge">{{ site.autor_experiencia }}</span>
+                        <h4 class="fw-bold mb-1">{{ site.autor_nome }}</h4>
+                        <p class="text-primary fw-semibold mb-2 fs-6">{{ site.autor_cargo }}</p>
                         
                         <div class="profile-socials mb-3">
-                            <a href="https://t.me/soarespaullo" target="_blank" title="Telegram"><i class="bi bi-telegram"></i></a>
-                            <a href="https://www.youtube.com/psinformatica" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
-                            <a href="https://linkedin.com/in/soarespaullo/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="mailto:soarespaullo@proton.me" title="E-mail"><i class="bi bi-envelope-at-fill"></i></a>
-                            <a href="https://soarespaullo.github.io" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="{{ site.social_telegram }}" target="_blank" title="Telegram"><i class="bi bi-telegram"></i></a>
+                            <a href="{{ site.social_youtube }}" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="{{ site.social_linkedin }}" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="mailto:{{ site.email }}" title="E-mail"><i class="bi bi-envelope-at-fill"></i></a>
+                            <a href="{{ site.social_github }}" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
                         </div>
 
                         <p class="text-muted small mb-3">
-                            Graduado em Segurança da Informação e Pós-graduado em Defesa Cibernética e Perícia Forense Computacional.
+                            {{ site.autor_formacao }}
                         </p>
                         <hr>
                         <div class="d-flex flex-wrap justify-content-center">
-                            <span class="skill-tag">Administrador de Sistemas</span>
-                            <span class="skill-tag">Cibersegurança</span>
-                            <span class="skill-tag">Especialista em Redes</span>
-                            <span class="skill-tag">Backup em Nuvem</span>
+                            {% for skill in site.autor_skills %}
+                            <span class="skill-tag">{{ skill }}</span>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -82,7 +48,7 @@
             <div class="col-lg-7">
                 <h2 class="fw-bold text-dark mb-4">Quem Somos</h2>
                 <p class="text-muted fs-5">
-                    A <strong>PSInformática</strong> nasceu da necessidade de oferecer um suporte técnico que vai além do básico. Com sede em Guarabira/PB, focamos em transformar a TI de nossos clientes em uma ferramenta estratégica.
+                    A <strong>{{ site.title }}</strong> nasceu da necessidade de oferecer um suporte técnico que vai além do básico. Com sede em {{ site.cidade }}/{{ site.estado }}, focamos em transformar a TI de nossos clientes em uma ferramenta estratégica.
                 </p>
                 <p class="text-muted">
                     Nossa expertise abrange desde a manutenção preventiva de hardware até o gerenciamento complexo de servidores e segurança cibernética. Acreditamos que uma infraestrutura estável é a base para o crescimento de qualquer empresa.
@@ -92,13 +58,13 @@
                     <div class="col-md-6">
                         <div class="value-box">
                             <h5 class="fw-bold"><i class="bi bi-bullseye text-primary me-2"></i>Missão</h5>
-                            <p class="small text-muted">Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios.</p>
+                            <p class="small text-muted">{{ site.missao }}</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="value-box">
                             <h5 class="fw-bold"><i class="bi bi-shield-lock text-primary me-2"></i>Valores</h5>
-                            <p class="small text-muted">Integridade, transparência e atualização constante frente às ameaças digitais modernas.</p>
+                            <p class="small text-muted">{{ site.valores }}</p>
                         </div>
                     </div>
                 </div>
@@ -135,39 +101,3 @@
         </div>
     </div>
 </section>
-
-<footer class="bg-dark text-white pt-5 pb-3">
-    <div class="container text-center text-lg-start">
-        <div class="row g-4 mb-4">
-            <div class="col-lg-4">
-                <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
-                <p class="text-secondary small">Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral.</p>
-            </div>
-            <div class="col-lg-4 ps-lg-5">
-                <h5 class="mb-3 text-white">Links Rápidos</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html" class="footer-link small d-block mb-2">Início</a></li>
-                    <li><a href="sobre.html" class="footer-link small d-block mb-2">Sobre</a></li>
-                    <li><a href="servicos.html" class="footer-link small d-block mb-2">Serviços</a></li>
-                    <li><a href="planos.html" class="footer-link small d-block mb-2">Planos</a></li>
-                    <li><a href="contato.html" class="footer-link small d-block mb-2">Contato</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
-                <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
-                    <a href="https://wa.me/5583999820876" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
-                    <a href="https://www.youtube.com/psinformatica" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
-                    <a href="https://t.me/soarespaullo" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
-                    <a href="https://soarespaullo.github.io" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr class="border-secondary">
-        <p class="small text-secondary mb-0 text-lg-start">© 2026 PSInformática. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-<script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

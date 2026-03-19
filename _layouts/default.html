@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon/favicon.ico' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/img/favicon/favicon-96x96.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
+
+    {% seo %} 
+    
+    <meta property="og:image" content="{{ '/assets/img/banner-tecnologia.jpg' | absolute_url }}">
+    <meta property="twitter:image" content="{{ '/assets/img/banner-tecnologia.jpg' | absolute_url }}">
+    
+    <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/bootstrap-icons.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/global.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url contains 'sobre' %}active{% endif %}" href="{{ '/sobre.html' | relative_url }}">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url contains 'servicos' %}active{% endif %}" href="{{ '/servicos.html' | relative_url }}">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url contains 'planos' %}active{% endif %}" href="{{ '/planos.html' | relative_url }}">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url contains 'contato' %}active{% endif %}" href="{{ '/contato.html' | relative_url }}">Contato</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="{{ site.url_suporte_remoto }}" target="_blank" class="btn btn-download shadow-sm">
+                            <i class="bi bi-display me-2"></i>Suporte Remoto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container text-center text-lg-start">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
+                    <p class="text-secondary small">{{ site.description }}</p>
+                </div>
+                <div class="col-lg-4 ps-lg-5">
+                    <h5 class="mb-3 text-white">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ '/' | relative_url }}" class="footer-link small d-block mb-2">Início</a></li>
+                        <li><a href="{{ '/sobre.html' | relative_url }}" class="footer-link small d-block mb-2">Sobre</a></li>
+                        <li><a href="{{ '/servicos.html' | relative_url }}" class="footer-link small d-block mb-2">Serviços</a></li>
+                        <li><a href="{{ '/planos.html' | relative_url }}" class="footer-link small d-block mb-2">Planos</a></li>
+                        <li><a href="{{ '/contato.html' | relative_url }}" class="footer-link small d-block mb-2">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
+                        <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
+                        <a href="{{ site.social_youtube }}" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+                        <a href="{{ site.social_telegram }}" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
+                        <a href="{{ site.social_github }}" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="small text-secondary mb-0">© {{ "now" | date: "%Y" }} {{ site.title }}. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+</body>
+</html>

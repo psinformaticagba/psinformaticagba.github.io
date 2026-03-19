@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos de Suporte - PSInformática</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">PSInformática</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-                <li class="nav-item"><a class="nav-link active" href="planos.html">Planos</a></li>
-                <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <a href="https://rustdesk.com/download" target="_blank" class="btn btn-download shadow-sm">
-                        <i class="bi bi-display me-2"></i>Suporte Remoto
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+---
+layout: default
+title: "Planos de Suporte - PSInformática"
+---
 
 <header class="page-header">
     <div class="container">
@@ -50,7 +17,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Básico</h3>
                     <p class="text-muted">Até 3 Equipamentos</p>
-                    <div class="price-tag mb-3">R$ 150<small class="fs-6">/mês</small></div>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_basico }}<small class="fs-6">/mês</small></div>
                     <hr>
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i>Suporte Remoto</li>
@@ -58,7 +25,7 @@
                         <li><i class="bi bi-check-circle-fill"></i>Remoção de Vírus</li>
                         <li><i class="bi bi-check-circle-fill"></i>Instalação de Softwares</li>
                     </ul>
-                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Básico." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Básico." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
                 </div>
             </div>
         </div>
@@ -69,7 +36,7 @@
                     <span class="badge bg-primary mb-2 shadow-sm">MAIS POPULAR</span>
                     <h3 class="card-title">Business</h3>
                     <p class="text-muted">Até 6 Equipamentos</p>
-                    <div class="price-tag mb-3">R$ 250<small class="fs-6">/mês</small></div>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_business }}<small class="fs-6">/mês</small></div>
                     <hr>
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
@@ -77,7 +44,7 @@
                         <li><i class="bi bi-check-circle-fill"></i>Reparo de Redes/Roteadores</li>
                         <li><i class="bi bi-check-circle-fill"></i>Configuração de Firewall</li>
                     </ul>
-                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Business." target="_blank" class="btn btn-primary w-100 mt-3 shadow fw-bold">Contratar Agora</a>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Business." target="_blank" class="btn btn-primary w-100 mt-3 shadow fw-bold">Contratar Agora</a>
                 </div>
             </div>
         </div>
@@ -87,7 +54,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Premium</h3>
                     <p class="text-muted">Até 10 Equipamentos</p>
-                    <div class="price-tag mb-3">R$ 350<small class="fs-6">/mês</small></div>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_premium }}<small class="fs-6">/mês</small></div>
                     <hr>
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
@@ -95,7 +62,7 @@
                         <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
                         <li><i class="bi bi-check-circle-fill"></i>Troca de Telas/Baterias*</li>
                     </ul>
-                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Premium." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
                 </div>
             </div>
         </div>
@@ -105,7 +72,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Corporate</h3>
                     <p class="text-muted">Até 15 Equipamentos</p>
-                    <div class="price-tag mb-3">R$ 500<small class="fs-6">/mês</small></div>
+                    <div class="price-tag mb-3">R$ {{ site.preco_plano_corporate }}<small class="fs-6">/mês</small></div>
                     <hr>
                     <ul class="feature-list text-start">
                         <li><i class="bi bi-check-circle-fill"></i><strong>Tudo do anterior</strong></li>
@@ -113,7 +80,7 @@
                         <li><i class="bi bi-hdd-network-fill text-primary"></i> <span class="server-highlight">1 Servidor Gerenciado</span></li>
                         <li><i class="bi bi-check-circle-fill"></i>Configuração de DVR/NVR</li>
                     </ul>
-                    <a href="https://wa.me/5583999820876?text=Olá! Quero contratar o Plano Corporate." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
+                    <a href="https://wa.me/{{ site.whatsapp }}?text=Olá! Quero contratar o Plano Corporate." target="_blank" class="btn btn-outline-primary w-100 mt-3 fw-bold">Contratar Agora</a>
                 </div>
             </div>
         </div>
@@ -156,7 +123,7 @@
             </table>
         </div>
         <div class="disclaimer-box shadow-sm">
-            <i class="bi bi-info-circle-fill me-2"></i> Importante: Peças de reposição são cobradas à parte.
+            <i class="bi bi-info-circle-fill me-2"></i> {{ site.disclaimer_pecas }}
         </div>
     </div>
 </section>
@@ -166,75 +133,19 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="accordion" id="faqPlanos">
+                {% for faq in site.data_faqs %}
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Existe fidelidade no contrato?</button>
+                        <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#f{{ forloop.index }}">
+                            {{ faq.pergunta }}
+                        </button>
                     </h2>
-                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqPlanos">
-                        <div class="accordion-body">Sim, trabalhamos com contratos de 12 meses. Esse período é necessário para estabilizar sua infraestrutura e implementar rotinas preventivas eficazes.</div>
+                    <div id="f{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" data-bs-parent="#faqPlanos">
+                        <div class="accordion-body">{{ faq.resposta }}</div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Como funciona o atendimento de urgência?</button>
-                    </h2>
-                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
-                        <div class="accordion-body">Para situações de parada total da empresa, o atendimento é prioritário. Planos avançados contam com tempos de resposta (SLA) reduzidos para incidentes críticos.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">O que acontece se eu precisar de mais visitas?</button>
-                    </h2>
-                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
-                        <div class="accordion-body">Caso exceda a cota do plano, visitas extras podem ser solicitadas com valor diferenciado para contratantes, ou você pode optar pelo upgrade para o próximo plano.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Posso migrar de plano durante o contrato?</button>
-                    </h2>
-                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqPlanos">
-                        <div class="accordion-body">Sim. O upgrade pode ser feito a qualquer momento se a sua necessidade técnica aumentar, com ajuste proporcional no valor da mensalidade.</div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </section>
-
-<footer class="bg-dark text-white pt-5 pb-3">
-    <div class="container text-center text-lg-start">
-        <div class="row g-4 mb-4">
-            <div class="col-lg-4">
-                <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
-                <p class="text-secondary small">Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral.</p>
-            </div>
-            <div class="col-lg-4 ps-lg-5">
-                <h5 class="mb-3 text-white">Links Rápidos</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html" class="footer-link small d-block mb-2">Início</a></li>
-                    <li><a href="sobre.html" class="footer-link small d-block mb-2">Sobre</a></li>
-                    <li><a href="servicos.html" class="footer-link small d-block mb-2">Serviços</a></li>
-                    <li><a href="planos.html" class="footer-link small d-block mb-2">Planos</a></li>
-                    <li><a href="contato.html" class="footer-link small d-block mb-2">Contato</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <h5 class="mb-3 text-white">Siga-nos nas Redes</h5>
-                <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-4">
-                    <a href="https://wa.me/5583999820876" target="_blank" class="social-icon-link"><i class="bi bi-whatsapp"></i></a>
-                    <a href="https://www.youtube.com/psinformatica" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
-                    <a href="https://t.me/soarespaullo" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
-                    <a href="https://soarespaullo.github.io" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr class="border-secondary">
-        <p class="small text-secondary mb-0 text-lg-start">© 2026 PSInformática. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-<script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

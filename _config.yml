@@ -1,0 +1,98 @@
+# Configurações Gerais
+title: "PSInformática"
+email: "psinformatica@riseup.net"
+description: "Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral."
+url: "https://psinformaticagba.github.io"
+baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
+whatsapp: "5583999820876"
+whatsapp_formatado: "(83) 99982-0876"
+
+# Campos para Tags de Compartilhamento (SEO)
+image: "/assets/img/banner-tecnologia.jpg"
+twitter:
+  card: summary_large_image
+
+# Localização e Horários
+cidade: "Guarabira"
+estado: "PB"
+horario_semana: "Segunda a Sexta: 08h às 18h"
+horario_sabado: "Sábado: 08h às 12h"
+
+# Links Úteis
+url_suporte_remoto: "https://rustdesk.com/download"
+disclaimer_pecas: "Importante: Peças de reposição são cobradas à parte."
+
+# Preços dos Planos
+preco_plano_basico: "150"
+preco_plano_business: "250"
+preco_plano_premium: "350"
+preco_plano_corporate: "500"
+
+# Dados do Autor (Página Sobre)
+autor_nome: "Paulo Soares"
+autor_cargo: "Fundador | Especialista em Infraestrutura"
+autor_experiencia: "+8 Anos de Experiência"
+autor_formacao: "Graduado em Segurança da Informação e Pós-graduado em Defesa Cibernética e Perícia Forense Computacional."
+missao: "Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios."
+valores: "Integridade, transparência e atualização constante frente às ameaças digitais modernas."
+
+# Redes Sociais
+social_telegram: "https://t.me/soarespaullo"
+social_youtube: "https://www.youtube.com/psinformatica"
+social_linkedin: "https://linkedin.com/in/soarespaullo/"
+social_github: "https://soarespaullo.github.io"
+
+# Lista de Skills
+autor_skills:
+  - "Administrador de Sistemas"
+  - "Cibersegurança"
+  - "Especialista em Redes"
+  - "Backup em Nuvem"
+
+# Lista de Clientes (Index)
+data_clientes:
+  - nome: "Papelart"
+    icone: "building"
+    depoimento: "Suporte rápido e eficiente. Desde que fechamos o contrato, nossas paradas por problemas técnicos acabaram."
+  - nome: "Toplab"
+    icone: "hospital"
+    depoimento: "Excelente atendimento. O gerenciamento dos nossos servidores nos trouxe muita segurança nos dados."
+  - nome: "Guarafrutas"
+    icone: "shop"
+    depoimento: "Equipe muito competente. O suporte remoto nos atende em minutos, facilitando muito o dia a dia da loja."
+
+# Lista de Serviços
+data_servicos:
+  - nome: "Suporte Técnico"
+    icone: "person-gear"
+    descricao: "Manutenção preventiva e corretiva de computadores, notebooks e periféricos com rapidez e garantia."
+  - nome: "Redes de Computadores"
+    icone: "diagram-3"
+    descricao: "Instalação, configuração e otimização de redes Wi-Fi e cabeamento estruturado para máxima performance."
+  - nome: "Servidores"
+    icone: "hdd-network"
+    descricao: "Administração e monitoramento de servidores Windows e Linux, garantindo disponibilidade 24/7."
+  - nome: "Backup e Nuvem"
+    icone: "cloud-check"
+    descricao: "Soluções de backup automatizado para proteger os dados vitais da sua empresa contra perdas e ataques."
+  - nome: "Consultoria Especializada"
+    icone: "headset"
+    descricao: "Assessoria técnica para aquisição de novos equipamentos e implementação de melhores práticas de TI."
+  - nome: "Segurança Digital"
+    icone: "shield-check"
+    descricao: "Remoção de malwares, instalação de firewalls e hardening de sistemas para proteger sua privacidade."
+
+# Dúvidas Frequentes (FAQ - Página Planos)
+data_faqs:
+  - pergunta: "Existe fidelidade no contrato?"
+    resposta: "Sim, trabalhamos com contratos de 12 meses. Esse período é necessário para estabilizar sua infraestrutura e implementar rotinas preventivas eficazes."
+  - pergunta: "Como funciona o atendimento de urgência?"
+    resposta: "Para situações de parada total da empresa, o atendimento é prioritário. Planos avançados contam com tempos de resposta (SLA) reduzidos para incidentes críticos."
+  - pergunta: "O que acontece se eu precisar de mais visitas?"
+    resposta: "Caso exceda a cota do plano, visitas extras podem ser solicitadas com valor diferenciado para contratantes, ou você pode optar pelo upgrade para o próximo plano."
+  - pergunta: "Posso migrar de plano durante o contrato?"
+    resposta: "Sim. O upgrade pode ser feito a qualquer momento se a sua necessidade técnica aumentar, com ajuste proporcional no valor da mensalidade."
+
+# Configurações do Jekyll
+plugins:
+  - jekyll-seo-tag
