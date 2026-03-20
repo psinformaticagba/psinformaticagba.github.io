@@ -1,44 +1,43 @@
-# PSInformática - Website Oficial
+# PSInformática - Website Oficial 🚀
 
-Este é o repositório do site institucional da **PSInformática**, uma empresa especializada em suporte técnico, infraestrutura de redes e manutenção de equipamentos em Guarabira e região.
+Este repositório contém o código-fonte do portal institucional da **PSInformática**, empresa especializada em suporte técnico, infraestrutura de redes e consultoria de TI em Guarabira/PB.
 
-O projeto foi desenvolvido com foco em um design limpo, leve e responsivo, garantindo que os clientes possam solicitar orçamentos e visualizar planos de serviços tanto no computador quanto no celular.
+O projeto utiliza a arquitetura **Jekyll**, o que permite uma gestão de conteúdo dinâmica e centralizada, garantindo alta performance e facilidade de manutenção.
+
+## 📄 Resumo do Projeto
+O objetivo deste portal é oferecer uma interface rápida, responsiva e profissional para que clientes possam conhecer nossos planos de serviços, solicitar suporte remoto e entrar em contato direto para orçamentos e consultorias.
 
 ## 📸 Demonstração do Projeto
-
-Aqui você pode ver como o site se comporta em diferentes dispositivos:
 
 | Desktop (PC) | Mobile (Celular) |
 | :---: | :---: |
 | <img src="screenshots/desktop.png" width="500" alt="Preview Desktop"> | <img src="screenshots/mobile.png" width="180" alt="Preview Mobile"> |
 
-## 🚀 Funcionalidades
-
-* **Página Inicial:** Banner interativo com serviços principais (Cibersegurança, Manutenção, Suporte).
-* **Gestão de Planos:** Exibição clara de planos Básico, Business e Premium.
-* **Suporte Remoto:** Link direto para download de ferramentas de acesso remoto (RustDesk).
-* **Controle de Serviços:** Estrutura para acompanhamento de ordens de serviço.
-* **Responsividade:** Interface adaptável para qualquer tamanho de tela via Bootstrap 5.
-* **SEO & Social:** Meta tags configuradas (Open Graph e Twitter Cards) para compartilhamento otimizado.
-
 ## 🛠️ Tecnologias Utilizadas
-
-* **HTML5** - Estruturação de conteúdo.
-* **CSS3** - Estilização customizada e layout.
-* **Bootstrap 5** - Framework para agilidade no layout e componentes.
-* **Bootstrap Icons** - Conjunto de ícones vetoriais.
-* **JavaScript** - Interatividade (Carousel, Navbar fixa).
+* **Jekyll**: Gerador de site estático (SSG).
+* **Liquid**: Linguagem de templating para lógica de dados dinâmica.
+* **Bootstrap 5**: Framework para design responsivo e componentes UI.
+* **FormSubmit**: Endpoint seguro para processamento de formulários via e-mail.
+* **GitHub Pages**: Hospedagem e deploy automatizado via GitHub Actions.
 
 ## 📁 Estrutura de Pastas
-
 ```text
-/
-├── screenshots/    # Capturas de tela para documentação
-├── css/            # Arquivos de estilo (global.css, main.css, bootstrap.min.css)
-├── js/             # Scripts (bootstrap.bundle.min.js)
-├── img/            # Imagens e ativos do site
-│   └── favicon/    # Conjunto completo de ícones e manifesto
-├── index.html      # Página principal
-├── planos.html     # Detalhamento dos planos de serviço
-├── contato.html    # Formulário e canais de atendimento
-└── README.md       # Documentação do projeto
+├── _config.yml      # O "Cérebro" do site (Configurações, Preços e Dados)
+├── _includes/       # Componentes reutilizáveis (Navbar, Footer, etc)
+├── _layouts/        # Templates base das páginas (Default)
+├── assets/          # Arquivos estáticos (CSS, JS, Imagens, Favicons)
+├── index.html       # Landing Page principal
+├── planos.html      # Detalhamento de serviços e tabelas de preços
+├── contato.html     # Formulário de contato com integração FormSubmit
+└── obrigado.html    # Página de confirmação pós-envio de formulário
+
+
+
+
+
+
+
+
+
+
+
