@@ -52,16 +52,22 @@ title: "Contato"
             </div>
 
             <div class="col-lg-7">
-                <div class="card contact-card">
-                    <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+                <div class="card contact-card shadow-lg border-0" style="border-radius: 20px;">
+                    <form action="https://formsubmit.co/{{ site.formsubmit_id }}" method="POST">
+                        
+                        <input type="hidden" name="_next" value="{{ '/obrigado.html' | absolute_url }}">
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Seu Nome</label>
                             <input type="text" name="name" class="form-control" placeholder="Ex: João Silva" required>
                         </div>
+                        
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Seu E-mail</label>
-                            <input type="email" name="_replyto" class="form-control" placeholder="exemplo@email.com" required>
+                            <input type="email" name="email" class="form-control" placeholder="exemplo@email.com" required>
                         </div>
+                        
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Assunto</label>
                             <select name="subject" class="form-select">
@@ -73,11 +79,15 @@ title: "Contato"
                                 <option>Outros</option>
                             </select>
                         </div>
+                        
                         <div class="mb-4">
                             <label class="form-label fw-semibold">Sua Mensagem</label>
                             <textarea name="message" class="form-control" rows="5" placeholder="Como podemos ajudar você?" required></textarea>
                         </div>
-                        <button type="submit" class="btn-send">Enviar Mensagem <i class="bi bi-send ms-2"></i></button>
+                        
+                        <button type="submit" class="btn-send w-100 py-3 shadow">
+                            Enviar Mensagem <i class="bi bi-send ms-2"></i>
+                        </button>
                     </form>
                 </div>
             </div>

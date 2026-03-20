@@ -47,7 +47,7 @@
                         <a class="nav-link {% if page.url contains 'contato' %}active{% endif %}" href="{{ '/contato.html' | relative_url }}">Contato</a>
                     </li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a href="{{ site.url_suporte_remoto }}" target="_blank" class="btn btn-download shadow-sm">
+                        <a href="{{ '/' | relative_url }}#suporte-remoto" class="btn btn-download shadow-sm">
                             <i class="bi bi-display me-2"></i>Suporte Remoto
                         </a>
                     </li>
@@ -82,6 +82,7 @@
                         <a href="{{ site.social_youtube }}" target="_blank" class="social-icon-link"><i class="bi bi-youtube"></i></a>
                         <a href="{{ site.social_telegram }}" target="_blank" class="social-icon-link"><i class="bi bi-telegram"></i></a>
                         <a href="{{ site.social_github }}" target="_blank" class="social-icon-link"><i class="bi bi-globe"></i></a>
+                        <a href="{{ site.social_blog }}" target="_blank" class="social-icon-link"><i class="bi bi-rss-fill"></i></a>
                     </div>
                 </div>
             </div>

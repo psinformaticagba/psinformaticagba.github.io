@@ -31,7 +31,7 @@ title: "PSInformática - Planos de Suporte e Manutenção"
             <div class="carousel-caption">
                 <h2 class="fw-bold">Suporte Remoto Imediato</h2>
                 <p>Atendimento ágil para resolver seus problemas de software sem sair de casa.</p>
-                <a href="{{ site.url_suporte_remoto }}" target="_blank" class="btn btn-danger px-4">Baixar Suporte</a>
+                <a href="#suporte-remoto" class="btn btn-danger px-4">Como Funciona?</a>
             </div>
         </div>
     </div>
@@ -140,8 +140,49 @@ title: "PSInformática - Planos de Suporte e Manutenção"
         </a>
     </div>
 
-    <div class="disclaimer-box shadow-sm">
-        <i class="bi bi-info-circle-fill me-2"></i> {{ site.disclaimer_pecas }}
+    <div class="disclaimer-box shadow-sm mt-4">
+        <p class="mb-2"><i class="bi bi-info-circle-fill me-2"></i> {{ site.disclaimer_pecas }}</p>
+        <p class="mb-0"><i class="bi bi-shield-lock-fill me-2"></i> {{ site.disclaimer_software }}</p>
+    </div>
+</section>
+
+<section id="suporte-remoto" class="section-suporte-remoto">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: var(--dark-blue);">Suporte Remoto em 3 Passos Simples</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="step-card-remoto">
+                    <div class="step-icon-container">
+                        <i class="bi bi-cloud-download"></i>
+                    </div>
+                    <h4 class="fw-bold">1. {{ site.passo_1_titulo }}</h4>
+                    <p class="small text-muted">{{ site.passo_1_desc }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card-remoto">
+                    <div class="step-icon-container">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <h4 class="fw-bold">2. {{ site.passo_2_titulo }}</h4>
+                    <p class="small text-muted">{{ site.passo_2_desc }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step-card-remoto">
+                    <div class="step-icon-container">
+                        <i class="bi bi-pc-display-horizontal"></i>
+                    </div>
+                    <h4 class="fw-bold">3. {{ site.passo_3_titulo }}</h4>
+                    <p class="small text-muted">{{ site.passo_3_desc }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <a href="{{ site.url_suporte_remoto }}" target="_blank" class="btn btn-suporte-action shadow">
+                <i class="bi bi-download me-2"></i>Baixar Software de Suporte
+            </a>
+        </div>
     </div>
 </section>
 
@@ -157,6 +198,28 @@ title: "PSInformática - Planos de Suporte e Manutenção"
             <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i><h5>Suporte Ágil</h5><p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p></div></div>
             <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i><h5>Backup e Nuvem</h5><p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p></div></div>
             <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i><h5>Prevenção</h5><p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section-marcas py-5">
+    <div class="container text-center mb-4">
+        <h6 class="section-marcas-title">Hardwares e Tecnologias de Alta Performance</h6>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-content">
+            {% for marca in site.data_marcas %}
+            <div class="marquee-item">
+                <img src="{{ '/assets/img/marcas/' | append: marca.imagem | relative_url }}" alt="Logo {{ marca.nome }}" class="logo-marca">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+            {% for marca in site.data_marcas %}
+            <div class="marquee-item">
+                <img src="{{ '/assets/img/marcas/' | append: marca.imagem | relative_url }}" alt="Logo {{ marca.nome }}" class="logo-marca">
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -185,7 +248,6 @@ title: "PSInformática - Planos de Suporte e Manutenção"
         <div class="row g-5">
             <div class="col-lg-5">
                 <h2 class="fw-bold mb-4">Fale Conosco</h2>
-                <p class="text-muted mb-5">Atendimento especializado em {{ site.cidade }} e região.</p>
                 <div class="d-flex mb-4">
                     <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0;"><i class="bi bi-geo-alt"></i></div>
                     <div><h5 class="mb-1">Localização</h5><p class="text-muted mb-0">{{ site.cidade }}, {{ site.estado }}</p></div>

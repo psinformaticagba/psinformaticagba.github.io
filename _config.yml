@@ -21,12 +21,25 @@ horario_sabado: "Sábado: 08h às 12h"
 # Links Úteis
 url_suporte_remoto: "https://rustdesk.com/download"
 disclaimer_pecas: "Importante: Peças de reposição são cobradas à parte."
+disclaimer_software: "Importante: Licenciamento de softwares (Windows, Office, Antivírus) é de responsabilidade do cliente."
+
+# Configurações de Formulário (Formsubmit)
+formsubmit_id: "43f726d7ce8df0d4cc2285ab4a7d73b0"
+url: "https://psinformaticagba.github.io" # Substitua pela URL real do seu site
 
 # Preços dos Planos
 preco_plano_basico: "150"
 preco_plano_business: "250"
 preco_plano_premium: "350"
 preco_plano_corporate: "500"
+
+# Tutorial de acesso Remoto
+passo_1_titulo: "Baixe o Suporte"
+passo_1_desc: "Clique no botão e baixe nosso software de acesso remoto seguro."
+passo_2_titulo: "Informe o ID"
+passo_2_desc: "Abra o programa e nos envie o ID/Senha pelo WhatsApp."
+passo_3_titulo: "Pronto!"
+passo_3_desc: "Nossos técnicos assumem o controle e resolvem seu problema na hora."
 
 # Dados do Autor (Página Sobre)
 autor_nome: "Paulo Soares"
@@ -39,8 +52,9 @@ valores: "Integridade, transparência e atualização constante frente às amea�
 # Redes Sociais
 social_telegram: "https://t.me/soarespaullo"
 social_youtube: "https://www.youtube.com/psinformatica"
-social_linkedin: "https://linkedin.com/in/soarespaullo/"
+social_linkedin: "https://linkedin.com/in/soarespaullo"
 social_github: "https://soarespaullo.github.io"
+social_blog: "https://soarespaullo.github.io/blog"
 
 # Lista de Skills
 autor_skills:
@@ -92,6 +106,31 @@ data_faqs:
     resposta: "Caso exceda a cota do plano, visitas extras podem ser solicitadas com valor diferenciado para contratantes, ou você pode optar pelo upgrade para o próximo plano."
   - pergunta: "Posso migrar de plano durante o contrato?"
     resposta: "Sim. O upgrade pode ser feito a qualquer momento se a sua necessidade técnica aumentar, com ajuste proporcional no valor da mensalidade."
+  - pergunta: "O suporte cobre apenas computadores ou também a rede e o servidor?"
+    resposta: "Nossos planos são abrangentes e cobram toda a sua infraestrutura: roteadores, switches, servidores, impressoras e estações de trabalho, garantindo que tudo funcione em harmonia."
+  - pergunta: "Vocês cuidam do backup dos meus dados?"
+    resposta: "Sim. Implementamos e monitoramos rotinas de backup automáticas (locais e em nuvem) para garantir que as informações da sua empresa estejam seguras contra falhas de hardware ou ataques virtuais."
+  - pergunta: "O atendimento é apenas presencial ou remoto também?"
+    resposta: "Utilizamos ferramentas de acesso remoto seguro para resolver problemas de software em minutos. Caso o problema exija intervenção física, enviamos um técnico até o local conforme o SLA do seu plano."
+  - pergunta: "Minha empresa é pequena, vale a pena ter um contrato de TI?"
+    resposta: "Com certeza. O contrato previne problemas antes que eles ocorram, evitando paradas repentinas que custam caro. É como um seguro: garantimos que sua tecnologia trabalhe a favor do seu crescimento, e não contra."
+
+# Marcas de Hardware e Tecnologia (Imagens em: assets/img/marcas/)
+data_marcas:
+  - nome: "ASUS"
+    imagem: "asus.png"
+  - nome: "Gigabyte"
+    imagem: "gigabyte.png"
+  - nome: "EVGA"
+    imagem: "evga.png"
+  - nome: "HyperX"
+    imagem: "hyperx.png"
+  - nome: "Corsair"
+    imagem: "corsair.png"
+  - nome: "Intel"
+    imagem: "intel.png"
+  - nome: "NVIDIA"
+    imagem: "nvidia.png"
 
 # Configurações do Jekyll
 plugins:
