@@ -101,7 +101,7 @@ data_clientes:
   - nome: "Fecon"
     icone: "briefcase"
     depoimento: "A consultoria em infraestrutura da PSInformática foi um divisor de águas. Hoje temos uma rede estável e segura."
-  - nome: "Suporte Box Brasil"
+  - nome: "Super Box Brasil"
     icone: "box-seam"
     depoimento: "Gestão técnica impecável. A migração dos nossos sistemas e o monitoramento de uptime garantem nossa operação 24/7."
   - nome: "Happy Kids"
