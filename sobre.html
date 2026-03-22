@@ -75,29 +75,17 @@ title: "Sobre Nós - PSInformática"
 
 <section class="bg-light py-5">
     <div class="container text-center">
-        <h3 class="fw-bold mb-4">Por que confiar na PSInformática?</h3>
+        <h3 class="fw-bold mb-4">Por que confiar na {{ site.title }}?</h3>
         <div class="row g-4 justify-content-center">
+            {% for card in site.cards_confianca %}
             <div class="col-md-4">
                 <div class="p-4 bg-white rounded shadow-sm border-top border-primary border-4 h-100">
-                    <i class="bi bi-mortarboard fs-1 text-primary mb-3"></i>
-                    <h5>Formação Sólida</h5>
-                    <p class="small text-muted">Especialista pós-graduado em Defesa Cibernética e Perícia Forense Computacional.</p>
+                    <i class="bi {{ card.icone }} fs-1 text-primary mb-3"></i>
+                    <h5>{{ card.titulo }}</h5>
+                    <p class="small text-muted">{{ card.descricao }}</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="p-4 bg-white rounded shadow-sm border-top border-primary border-4 h-100">
-                    <i class="bi bi-gear-wide-connected fs-1 text-primary mb-3"></i>
-                    <h5>Metodologia Hardening</h5>
-                    <p class="small text-muted">Aplicamos técnicas rigorosas de segurança para tornar seus sistemas resistentes a ataques.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4 bg-white rounded shadow-sm border-top border-primary border-4 h-100">
-                    <i class="bi bi-clock-history fs-1 text-primary mb-3"></i>
-                    <h5>Monitoramento Ativo</h5>
-                    <p class="small text-muted">Não apenas consertamos; monitoramos sua rede para evitar que problemas aconteçam.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
