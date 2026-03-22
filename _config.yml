@@ -62,6 +62,29 @@ autor_skills:
   - "Cibersegurança"
   - "Especialista em Redes"
   - "Backup em Nuvem"
+  - "Gestão de DNS/SSL"
+  - "Segurança de Servidores"
+
+# Cards de Confiança
+cards_confianca:
+  - titulo: "Formação Sólida"
+    icone: "bi-mortarboard"
+    descricao: "Especialista pós-graduado em Defesa Cibernética e Perícia Forense Computacional."
+  - titulo: "Metodologia Hardening"
+    icone: "bi-gear-wide-connected"
+    descricao: "Aplicamos técnicas rigorosas de segurança para tornar seus sistemas resistentes a ataques."
+  - titulo: "Monitoramento Ativo"
+    icone: "bi-clock-history"
+    descricao: "Não apenas consertamos; monitoramos sua rede para evitar que problemas aconteçam."
+  - titulo: "Atendimento Personalizado"
+    icone: "bi-person-check"
+    descricao: "Suporte consultivo que entende a realidade do seu negócio, sem respostas prontas ou robóticas."
+  - titulo: "Infraestrutura Resiliente"
+    icone: "bi-hdd-network"
+    descricao: "Projetamos redes e servidores com redundância, focando sempre na continuidade da sua operação."
+  - titulo: "Ética e Sigilo"
+    icone: "bi-lock"
+    descricao: "Tratamento rigoroso de dados sensíveis, garantindo total privacidade e conformidade com as boas práticas."
 
 # Lista de Clientes (Index)
 data_clientes:
