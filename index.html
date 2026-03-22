@@ -224,21 +224,73 @@ title: "PSInformática - Planos de Suporte e Manutenção"
     </div>
 </section>
 
-<section id="clientes" class="bg-white">
+<section id="clientes" class="bg-white py-5">
     <div class="container text-center">
-        <h2 class="fw-bold mb-2">Quem Confia no Nosso Trabalho</h2>
-        <p class="text-muted mb-5">Empresas que contam com a {{ site.title }} para manter sua infraestrutura rodando 100%.</p>
+        <div class="mb-4">
+            <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-4 py-2 border border-primary border-opacity-25" style="letter-spacing: 1px;">
+                <i class="bi bi-patch-check-fill me-2"></i>CONFIANÇA COMPROVADA
+            </span>
+        </div>
+
+        <h2 class="fw-bold mb-2 text-dark">Quem Confia no Nosso Trabalho</h2>
+        <p class="text-muted mb-5 mx-auto" style="max-width: 750px;">
+            Atendemos mais de <strong>200 clientes</strong> em {{ site.cidade }} e região, garantindo que empresas de todos os portes tenham uma infraestrutura de TI resiliente e segura.
+        </p>
+
         <div class="row g-4">
             {% for cliente in site.data_clientes %}
             <div class="col-md-4">
-                <div class="testimonial-card">
-                    <i class="bi bi-{{ cliente.icone }} text-primary fs-1 mb-3"></i>
-                    <h5 class="fw-bold">{{ cliente.nome }}</h5>
-                    <p class="fst-italic text-muted">"{{ cliente.depoimento }}"</p>
-                    <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <div class="testimonial-card h-100 position-relative">
+                    <div class="mb-3">
+                        <i class="bi bi-{{ cliente.icone }} text-primary fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3 text-dark">{{ cliente.nome }}</h5>
+                    <p class="fst-italic text-muted small mb-3">"{{ cliente.depoimento }}"</p>
+                    
+                    <div class="text-warning small mb-2">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    
+                    <div class="position-absolute top-0 end-0 p-3 opacity-25">
+                        <i class="bi bi-shield-check fs-4 text-primary"></i>
+                    </div>
                 </div>
             </div>
             {% endfor %}
+        </div>
+
+        <div class="mt-5 p-4 p-lg-5 trust-banner-clean shadow-sm position-relative overflow-hidden">
+            <div class="row align-items-center position-relative" style="z-index: 2;">
+                <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0 border-lg-end pe-lg-5">
+                    <div class="d-flex flex-column flex-lg-row align-items-center gap-4">
+                        
+                        <div class="number-highlight">
+                            <span class="display-4 fw-black d-block lh-1">+200</span>
+                            <small class="text-uppercase fw-bold text-muted" style="font-size: 0.65rem; letter-spacing: 2px;">Clientes</small>
+                        </div>
+                        
+                        <div class="content-text">
+                            <h4 class="fw-bold mb-2 text-dark text-uppercase tracking-wider">
+                                Empresas Blindadas pela <span class="text-primary">PSInformática</span>
+                            </h4>
+                            <p class="text-muted mb-3 small">
+                                Expertise multissetorial: 
+                                <span class="fw-bold text-dark">Saúde, Comércio, Indústria e Educação.</span>
+                            </p>
+                            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2">
+                                <span class="badge-status-item"><i class="bi bi-shield-fill-check me-1"></i>Suporte Remoto</span>
+                                <span class="badge-status-item"><i class="bi bi-clock-history me-1"></i>Monitoramento 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end ps-lg-4">
+                    <p class="small text-muted mb-3 d-none d-lg-block">Infraestrutura de TI levada a sério.</p>
+                    <a href="{{ '/contato.html' | relative_url }}" class="btn btn-primary btn-lg shadow-sm px-4 py-3 fw-bold rounded-pill">
+                        Falar com Especialista <i class="bi bi-whatsapp ms-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

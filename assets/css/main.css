@@ -1,4 +1,6 @@
-/* --- ESTILOS EXCLUSIVOS DA PÁGINA INICIAL (INDEX) --- */
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA PÁGINA INICIAL (INDEX) ---
+   ========================================================================== */
 
 /* Carrossel */
 .carousel-item {
@@ -6,6 +8,7 @@
     background: no-repeat center center scroll;
     background-size: cover;
 }
+
 .carousel-caption {
     bottom: 20%;
     z-index: 2;
@@ -14,6 +17,7 @@
     border-radius: 15px;
     backdrop-filter: blur(5px);
 }
+
 .carousel-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -46,13 +50,16 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
 .card-plan:hover { transform: translateY(-10px); }
+
 .price-tag { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
 
 .service-card {
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
+
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
@@ -60,18 +67,77 @@
     background-color: #fff !important;
 }
 
+/* --- Estilos de Clientes --- */
 .testimonial-card {
     background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-bottom: 4px solid var(--primary-color);
+    border-radius: 18px;
+    padding: 40px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 5px solid var(--primary-color);
+    transition: all 0.4s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Banner de Confiança */
+.trust-banner-clean {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-left: 8px solid var(--primary-color);
+    text-align: left;
+}
+
+/* Destaque do número (Sem Selo) */
+.number-highlight {
+    text-align: center;
+    min-width: 120px;
+}
+
+.number-highlight span {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900 !important;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* Etiquetas de Status */
+.badge-status-item {
+    background: #f8f9fa;
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fw-black { font-weight: 900; }
+.tracking-wider { letter-spacing: 1px; }
+
+/* Botão Pílula */
+.trust-banner-clean .btn-primary {
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.trust-banner-clean .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
 }
 
 /* Utilidades da Home */
 section { padding: 80px 0; }
+
 .feature-list { font-size: 0.9rem; list-style: none; padding-left: 0; min-height: 160px;}
+
 .bi-check-circle-fill { color: #28a745; margin-right: 8px; }
+
 .server-highlight { color: #0056b3; font-weight: bold; background: #e7f1ff; padding: 2px 8px; border-radius: 4px; display: inline-block; }
 
 .disclaimer-box {
@@ -79,14 +145,22 @@ section { padding: 80px 0; }
     padding: 15px; border-radius: 8px; display: inline-block; margin-top: 30px;
 }
 
-/* Responsivo */
+/* Responsivo Home */
 @media (max-width: 768px) {
     .carousel-item { height: 400px; }
     .carousel-caption { bottom: 10%; margin: 0 10px; display: block !important; }
     .stats-bridge { margin-left: 15px; margin-right: 15px; width: auto; }
 }
 
-/* --- ESTILOS EXCLUSIVOS DA PÁGINA DE CONTATO --- */
+@media (min-width: 992px) {
+    .border-lg-end {
+        border-right: 1px solid rgba(0,0,0,0.08);
+    }
+}
+
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA PÁGINA DE CONTATO ---
+   ========================================================================== */
 
 /* Hero Section */
 .contact-hero {
@@ -102,11 +176,6 @@ section { padding: 80px 0; }
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     background: #fff;
     padding: 40px;
-}
-
-/* Ajuste fino para o card no celular */
-@media (max-width: 576px) {
-    .contact-card { padding: 25px 20px; }
 }
 
 .form-control, .form-select {
@@ -157,7 +226,14 @@ section { padding: 80px 0; }
     margin-right: 20px;
 }
 
-/* --- ESTILOS EXCLUSIVOS DA PÁGINA DE PLANOS --- */
+/* Ajuste fino para o card no celular */
+@media (max-width: 576px) {
+    .contact-card { padding: 25px 20px; }
+}
+
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA PÁGINA DE PLANOS ---
+   ========================================================================== */
 
 /* Fundo Azul (Header da Página) */
 .page-header {
@@ -165,50 +241,6 @@ section { padding: 80px 0; }
     color: white;
     padding: 80px 0; 
     text-align: center;
-}
-
-/* Cards de Planos */
-.card-plan {
-    transition: transform 0.3s;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.card-plan:hover { 
-    transform: translateY(-10px); 
-}
-
-.price-tag { 
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    color: var(--primary-color); 
-}
-
-.feature-list { 
-    font-size: 0.9rem; 
-    list-style: none; 
-    padding-left: 0; 
-    min-height: 160px;
-}
-
-.feature-list li { 
-    margin-bottom: 8px; 
-}
-
-.bi-check-circle-fill { 
-    color: #28a745; 
-    margin-right: 8px; 
-}
-
-.server-highlight { 
-    color: #0056b3; 
-    font-weight: bold; 
-    background: #e7f1ff; 
-    padding: 2px 8px; 
-    border-radius: 4px; 
-    display: inline-block; 
-    margin-top: 5px; 
 }
 
 /* Tabela Comparativa */
@@ -238,19 +270,6 @@ section { padding: 80px 0; }
     color: var(--primary-color); 
 }
 
-/* Disclaimer (Aviso importante) */
-.disclaimer-box {
-    background-color: #fff3cd;
-    color: #856404;
-    border-left: 5px solid #ffeeba;
-    padding: 15px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-top: 30px;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
 /* FAQ (Acordeão) */
 .accordion-item { 
     border: none; 
@@ -265,7 +284,9 @@ section { padding: 80px 0; }
     color: var(--primary-color); 
 }
 
-/* --- ESTILOS EXCLUSIVOS DA PÁGINA DE SERVIÇOS --- */
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA PÁGINA DE SERVIÇOS ---
+   ========================================================================== */
 
 .services-hero {
     background: linear-gradient(135deg, #0056b3 0%, var(--dark-blue) 100%);
@@ -305,7 +326,6 @@ section { padding: 80px 0; }
     transition: 0.3s;
 }
 
-/* ATUALIZADO: Ícone agora gira e aumenta levemente como no suporte remoto */
 .service-card:hover .service-icon {
     background: var(--primary-color);
     color: white;
@@ -330,7 +350,9 @@ section { padding: 80px 0; }
     transition: 0.3s;
 }
 
-/* --- ESTILOS EXCLUSIVOS DA PÁGINA SOBRE --- */
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA PÁGINA SOBRE ---
+   ========================================================================== */
 
 /* Hero Section */
 .about-hero {
@@ -404,9 +426,10 @@ section { padding: 80px 0; }
     transform: scale(1.1);
 }
 
-/* --- ESTILOS EXCLUSIVOS DA SEÇÃO MARCAS E TECNOLOGIAS --- */
+/* ==========================================================================
+   --- ESTILOS EXCLUSIVOS DA SEÇÃO MARCAS E TECNOLOGIAS ---
+   ========================================================================== */
 
-/* Container Principal da Seção */
 .section-marcas {
   background-color: #ffffff; 
   border-top: 1px solid #f0f0f0;
@@ -414,10 +437,9 @@ section { padding: 80px 0; }
   padding: 40px 0;
 }
 
-/* Título da Seção (Estilo Moderno/Apple) */
 .section-marcas-title {
   text-transform: uppercase;
-  color: #adb5bd; /* Cinza claro elegante */
+  color: #adb5bd;
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 4px;
@@ -425,7 +447,6 @@ section { padding: 80px 0; }
   text-align: center;
 }
 
-/* Container do Marquee */
 .marquee-container {
   overflow: hidden;
   user-select: none;
@@ -434,7 +455,6 @@ section { padding: 80px 0; }
   background: white;
 }
 
-/* Gradiente Suave nas Laterais (Efeito de Desfoque nas bordas) */
 .marquee-container::before,
 .marquee-container::after {
   content: "";
@@ -453,61 +473,53 @@ section { padding: 80px 0; }
   background: linear-gradient(to left, white, transparent);
 }
 
-/* Conteúdo que se move */
 .marquee-content {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
   min-width: 100%;
-  animation: scroll-left-marcas 40s linear infinite; /* Mais lento para ser mais legível */
+  animation: scroll-left-marcas 40s linear infinite;
 }
 
-/* Item individual (Logo) */
 .marquee-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 3rem; /* Espaçamento entre as logos */
+  padding: 0 3rem;
 }
 
-/* Estilo da Imagem da Logo */
 .logo-marca {
-  /* Aumentado para 90px para compensar o espaço vazio das suas imagens 1080p */
   height: 90px; 
   width: auto;
   max-width: 200px;
   object-fit: contain;
-  
-  /* Zoom extra para "limpar" as bordas vazias da imagem original */
   transform: scale(1.3); 
-  
-  /* Visual Profissional: Cinza sutil */
   filter: grayscale(100%);
   opacity: 0.4;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efeito ao passar o mouse */
 .marquee-item:hover .logo-marca {
   filter: grayscale(0%);
   opacity: 1;
-  transform: scale(1.45); /* Aumenta um pouco no hover */
+  transform: scale(1.45);
   cursor: pointer;
 }
 
-/* Animação Infinita */
 @keyframes scroll-left-marcas {
   from { transform: translateX(0); }
   to { transform: translateX(-100%); }
 }
 
-/* Pausar suavemente ao passar o mouse */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }
 
-/* --- ESTILO DO PASSO A PASSO DE SUPORTE REMOTO --- */
+/* ==========================================================================
+   --- ESTILO DO PASSO A PASSO DE SUPORTE REMOTO ---
+   ========================================================================== */
+
 .section-suporte-remoto {
     background-color: #f8f9fa; 
     padding: 80px 0;
@@ -530,12 +542,11 @@ section { padding: 80px 0; }
     border-color: var(--primary-color);
 }
 
-/* ÍCONE ATUALIZADO PARA AZUL IGUAL AOS SERVIÇOS */
 .step-icon-container {
     width: 65px;
     height: 65px;
-    background: linear-gradient(135deg, #e7f1ff 0%, #cce5ff 100%); /* Azul igual serviços */
-    color: var(--primary-color); /* Ícone azul */
+    background: linear-gradient(135deg, #e7f1ff 0%, #cce5ff 100%);
+    color: var(--primary-color);
     border-radius: 15px;
     display: inline-flex;
     align-items: center;
@@ -546,9 +557,9 @@ section { padding: 80px 0; }
 }
 
 .step-card-remoto:hover .step-icon-container {
-    background: var(--primary-color); /* Fundo azul preenchido */
-    color: white; /* Ícone branco */
-    transform: rotate(-5deg) scale(1.1); /* Mantive o charme do giro */
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(-5deg) scale(1.1);
 }
 
 .step-card-remoto h4 {
@@ -562,7 +573,6 @@ section { padding: 80px 0; }
     line-height: 1.6;
 }
 
-/* Botão de Download Estilizado */
 .btn-suporte-action {
     background-color: var(--primary-color);
     color: white;
@@ -575,7 +585,7 @@ section { padding: 80px 0; }
     transition: 0.3s;
     display: inline-flex;
     align-items: center;
-    text-decoration: none; /* Garante que não tenha sublinhado */
+    text-decoration: none;
 }
 
 .btn-suporte-action:hover {
@@ -585,17 +595,28 @@ section { padding: 80px 0; }
     transform: scale(1.02);
 }
 
+/* ==========================================================================
+   --- ESTILOS DO FOOTER ---
+   ========================================================================== */
 
+.footer-link {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+.footer-link:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
 
+.social-icon-link {
+    color: #6c757d;
+    transition: 0.3s;
+}
 
-
-
-
-
-
-
-
-
-
-
+.social-icon-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    display: inline-block;
+}
