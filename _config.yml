@@ -74,6 +74,15 @@ data_clientes:
   - nome: "Guarafrutas"
     icone: "shop"
     depoimento: "Equipe muito competente. O suporte remoto nos atende em minutos, facilitando muito o dia a dia da loja."
+  - nome: "Fecon"
+    icone: "briefcase"
+    depoimento: "A consultoria em infraestrutura da PSInformática foi um divisor de águas. Hoje temos uma rede estável e segura."
+  - nome: "Suporte Box Brasil"
+    icone: "box-seam"
+    depoimento: "Gestão técnica impecável. A migração dos nossos sistemas e o monitoramento de uptime garantem nossa operação 24/7."
+  - nome: "Happy Kids"
+    icone: "emoji-smile"
+    depoimento: "Atendimento nota 10! Sempre que precisamos de suporte, seja local ou remoto, somos atendidos com muita agilidade."
 
 # Lista de Serviços
 data_servicos:
@@ -95,6 +104,15 @@ data_servicos:
   - nome: "Segurança Digital"
     icone: "shield-check"
     descricao: "Remoção de malwares, instalação de firewalls e hardening de sistemas para proteger sua privacidade."
+  - nome: "Gestão de Ecossistemas Web"
+    icone: "browser-edge"
+    descricao: "Instalação, configuração e manutenção de ambientes web, garantindo que temas, plugins e sistemas funcionem em perfeita harmonia."
+  - nome: "Infraestrutura de Domínios"
+    icone: "globe-americas"
+    descricao: "Gestão técnica de DNS, implementação de certificados SSL/TLS e otimização de performance via CDN Cloudflare para sites ultra-rápidos."
+  - nome: "Administração de Ambientes"
+    icone: "database-up"
+    descricao: "Migração segura de dados, gestão de bancos de dados MySQL e monitoramento de uptime para manter sua operação online 24/7."
 
 # Dúvidas Frequentes (FAQ - Página Planos)
 data_faqs:
