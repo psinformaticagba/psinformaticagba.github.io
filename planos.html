@@ -102,31 +102,28 @@ title: "Planos de Suporte - PSInformática"
                     </tr>
                 </thead>
                 <tbody class="text-center align-middle">
+                    {% for item in site.tabela_comparativa %}
                     <tr>
-                        <td class="text-start fw-bold">Visitas Técnicas Presenciais</td>
-                        <td class="visit-count">1 Visita /mês</td>
-                        <td class="visit-count">2 Visitas /mês</td>
-                        <td class="visit-count">4 Visitas /mês</td>
-                        <td class="visit-count">Ilimitado</td>
+                        <td class="text-start {% if item.recurso == 'Visitas Técnicas Presenciais' or item.recurso == 'Tempo de Resposta (SLA)' %}fw-bold{% endif %}">
+                            {{ item.recurso }}
+                        </td>
+                        
+                        {% assign tipos = "basico,business,premium,corporate" | split: "," %}
+                        {% for tipo in tipos %}
+                        <td>
+                            {% if item.recurso == "Visitas Técnicas Presenciais" %}
+                                <span class="visit-count"><strong class="text-dark">{{ item[tipo] }}</strong></span>
+                            {% elsif item[tipo] == true %}
+                                <i class="bi bi-check-lg"></i>
+                            {% elsif item[tipo] == false %}
+                                <i class="bi bi-dash"></i>
+                            {% else %}
+                                {{ item[tipo] }}
+                            {% endif %}
+                        </td>
+                        {% endfor %}
                     </tr>
-                    <tr>
-                        <td class="text-start fw-bold">Tempo de Resposta (SLA)</td>
-                        <td>Até 24h úteis</td>
-                        <td>Até 12h úteis</td>
-                        <td>Até 6h úteis</td>
-                        <td>Prioridade Total</td>
-                    </tr>
-                    <tr><td class="text-start">Suporte Remoto Imediato</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Formatação e Reinstalação de Sistemas</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Instalação de Programas e Drivers</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Limpeza Preventiva (Física e Lógica)</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Gerenciamento Mikrotik / Firewall</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Configuração de Impressoras e Periféricos</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Backup e Proteção de Dados</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Gestão de Servidores (Windows/Linux)</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Relatórios Mensais de Desempenho</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Suporte a Sistemas de Câmeras (CFTV)</td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-dash"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
-                    <tr><td class="text-start">Consultoria para Compra de Hardware</td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td><td><i class="bi bi-check-lg"></i></td></tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
