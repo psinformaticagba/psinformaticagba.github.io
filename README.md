@@ -36,7 +36,7 @@ O portal atua como o principal ponto de contato digital da empresa, permitindo a
 
 A estrutura segue o padrão de convenção do Jekyll, separando lógica de dados de apresentação visual:
 
-```text
+```
 ├── _config.yml           # Configurações globais, variáveis de SEO e preços
 ├── _includes/            # Componentes modulares (Navbar, Footer, Modais)
 ├── _layouts/             # Templates estruturais das páginas
@@ -48,6 +48,7 @@ A estrutura segue o padrão de convenção do Jekyll, separando lógica de dados
 ├── index.html            # Landing Page com prova social e stats
 ├── planos.html           # Tabela comparativa e FAQ técnico
 └── contato.html          # Gateway de comunicação via FormSubmit
+```
 
 ## 🚀 Desenvolvimento Local
 
@@ -58,7 +59,7 @@ Para rodar o projeto e realizar testes em ambiente de desenvolvimento:
 2. Clonar o repositório:
 
 ```
-git clone https://github.com/psinformaticagba/psinformaticagba.github.io.git]
+git clone https://github.com/psinformaticagba/psinformaticagba.github.io.git
 ```
 
 3. Instalar dependências:
