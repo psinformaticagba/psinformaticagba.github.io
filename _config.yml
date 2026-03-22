@@ -34,6 +34,74 @@ preco_plano_business: "250"
 preco_plano_premium: "350"
 preco_plano_corporate: "500"
 
+# Comparativo Detalhado (Tabela da página Planos)
+tabela_comparativa:
+  - recurso: "Visitas Técnicas Presenciais"
+    basico: "1 Visita /mês"
+    business: "2 Visitas /mês"
+    premium: "4 Visitas /mês"
+    corporate: "Ilimitado"
+  - recurso: "Tempo de Resposta (SLA)"
+    basico: "Até 24h úteis"
+    business: "Até 12h úteis"
+    premium: "Até 6h úteis"
+    corporate: "Prioridade Total"
+  - recurso: "Suporte Remoto Imediato"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Formatação e Reinstalação de Sistemas"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Instalação de Programas e Drivers"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Limpeza Preventiva (Física e Lógica)"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Gerenciamento Mikrotik / Firewall"
+    basico: false
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Configuração de Impressoras e Periféricos"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+  - recurso: "Backup e Proteção de Dados"
+    basico: false
+    business: false
+    premium: true
+    corporate: true
+  - recurso: "Gestão de Servidores (Windows/Linux)"
+    basico: false
+    business: false
+    premium: true
+    corporate: true
+  - recurso: "Relatórios Mensais de Desempenho"
+    basico: false
+    business: false
+    premium: true
+    corporate: true
+  - recurso: "Suporte a Sistemas de Câmeras (CFTV)"
+    basico: false
+    business: false
+    basico: false
+    corporate: true
+  - recurso: "Consultoria para Compra de Hardware"
+    basico: true
+    business: true
+    premium: true
+    corporate: true
+
 # Tutorial de acesso Remoto
 passo_1_titulo: "Baixe o Suporte"
 passo_1_desc: "Clique no botão e baixe nosso software de acesso remoto seguro."
