@@ -10,7 +10,6 @@
     <link rel="apple-touch-icon" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
     <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
 
-    {% assign page.description = site.description_social %}
     {% seo %} 
 
     <meta property="og:image" content="{{ '/assets/img/banner-tecnologia.jpg' | absolute_url }}">
@@ -64,7 +63,7 @@
                 <div class="row g-4 mb-4">
                     <div class="col-lg-4">
                         <h3 class="fw-bold text-primary mb-3">PS<span class="text-white">Informática</span></h3>
-                        <p class="text-secondary small">{{ site.description }}</p>
+                        <p class="text-secondary small">{{ site.footer_description }}</p>
 
                         <div class="d-inline-flex align-items-center bg-secondary bg-opacity-10 p-2 rounded border border-secondary border-opacity-25 mt-2">
                             <i class="bi bi-shield-check text-primary me-2"></i>
