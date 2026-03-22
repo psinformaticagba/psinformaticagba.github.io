@@ -1,8 +1,8 @@
 # Configurações Gerais
 title: "PSInformática"
 email: "psinformatica@riseup.net"
-description: "Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral."
-description_social: "Soluções completas em TI e Manutenção. Suporte ágil, segurança de dados e planos de contrato sob medida para o seu negócio."
+description: "Soluções completas em TI e Manutenção. Suporte ágil, segurança de dados e planos de contrato sob medida para o seu negócio."
+footer_description: "Especialistas em suporte técnico, infraestrutura de redes e manutenção de equipamentos de informática em geral."
 url: "https://psinformaticagba.github.io"
 baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
 whatsapp: "5583999820876"
@@ -157,7 +157,7 @@ data_faqs:
   - pergunta: "Minha empresa é pequena, vale a pena ter um contrato de TI?"
     resposta: "Com certeza. O contrato previne problemas antes que eles ocorram, evitando paradas repentinas que custam caro. É como um seguro: garantimos que sua tecnologia trabalhe a favor do seu crescimento, e não contra."
 
-# Marcas de Hardware e Tecnologia (Imagens em: assets/img/marcas/)
+# Marcas de Hardware e Tecnologia (index) - (Imagens em: assets/img/marcas/)
 data_marcas:
   - nome: "ASUS"
     imagem: "asus.png"
