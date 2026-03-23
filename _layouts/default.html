@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/img/favicon/favicon-96x96.png' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
     <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
-
+    
     {% seo %} 
 
     <meta property="og:image" content="{{ '/assets/img/banner-tecnologia.jpg' | absolute_url }}">
@@ -25,30 +25,42 @@
     <div class="main-wrapper">
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">
+                    <i class="bi bi-cpu text-primary me-2"></i>{{ site.title }}
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Início</a>
+                            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">
+                                <i class="bi bi-house-door me-1"></i> Início
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url contains 'sobre' %}active{% endif %}" href="{{ '/sobre.html' | relative_url }}">Sobre</a>
+                            <a class="nav-link {% if page.url contains 'sobre' %}active{% endif %}" href="{{ '/sobre.html' | relative_url }}">
+                                <i class="bi bi-info-circle me-1"></i> Sobre
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url contains 'servicos' %}active{% endif %}" href="{{ '/servicos.html' | relative_url }}">Serviços</a>
+                            <a class="nav-link {% if page.url contains 'servicos' %}active{% endif %}" href="{{ '/servicos.html' | relative_url }}">
+                                <i class="bi bi-gear-wide-connected me-1"></i> Serviços
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url contains 'planos' %}active{% endif %}" href="{{ '/planos.html' | relative_url }}">Planos</a>
+                            <a class="nav-link {% if page.url contains 'planos' %}active{% endif %}" href="{{ '/planos.html' | relative_url }}">
+                                <i class="bi bi-card-checklist me-1"></i> Planos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url contains 'contato' %}active{% endif %}" href="{{ '/contato.html' | relative_url }}">Contato</a>
+                            <a class="nav-link {% if page.url contains 'contato' %}active{% endif %}" href="{{ '/contato.html' | relative_url }}">
+                                <i class="bi bi-envelope me-1"></i> Contato
+                            </a>
                         </li>
                         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                             <a href="{{ '/' | relative_url }}#suporte-remoto" class="btn btn-download shadow-sm">
-                                <i class="bi bi-display me-2"></i>Suporte Remoto
+                                <i class="bi bi-headset me-2"></i>Suporte Remoto
                             </a>
                         </li>
                     </ul>
@@ -76,11 +88,11 @@
                     <div class="col-lg-4 ps-lg-5">
                         <h5 class="mb-3 text-white">Links Rápidos</h5>
                         <ul class="list-unstyled">
-                            <li><a href="{{ '/' | relative_url }}" class="footer-link small d-block mb-2">Início</a></li>
-                            <li><a href="{{ '/sobre.html' | relative_url }}" class="footer-link small d-block mb-2">Sobre</a></li>
-                            <li><a href="{{ '/servicos.html' | relative_url }}" class="footer-link small d-block mb-2">Serviços</a></li>
-                            <li><a href="{{ '/planos.html' | relative_url }}" class="footer-link small d-block mb-2">Planos</a></li>
-                            <li><a href="{{ '/contato.html' | relative_url }}" class="footer-link small d-block mb-2">Contato</a></li>
+                            <li><a href="{{ '/' | relative_url }}" class="footer-link small d-block mb-2"><i class="bi bi-chevron-right small me-1"></i> Início</a></li>
+                            <li><a href="{{ '/sobre.html' | relative_url }}" class="footer-link small d-block mb-2"><i class="bi bi-chevron-right small me-1"></i> Sobre</a></li>
+                            <li><a href="{{ '/servicos.html' | relative_url }}" class="footer-link small d-block mb-2"><i class="bi bi-chevron-right small me-1"></i> Serviços</a></li>
+                            <li><a href="{{ '/planos.html' | relative_url }}" class="footer-link small d-block mb-2"><i class="bi bi-chevron-right small me-1"></i> Planos</a></li>
+                            <li><a href="{{ '/contato.html' | relative_url }}" class="footer-link small d-block mb-2"><i class="bi bi-chevron-right small me-1"></i> Contato</a></li>
                         </ul>
                     </div>
 
