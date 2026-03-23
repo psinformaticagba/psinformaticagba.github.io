@@ -8,10 +8,6 @@
     transition: color 0.3s ease;
 }
 
-.nav-link:hover i {
-    color: var(--bs-primary);
-}
-
 .navbar-nav .nav-item {
     margin-right: 5px;
 }
