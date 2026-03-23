@@ -1,4 +1,22 @@
 /* ==========================================================================
+   --- AJUSTE DOS ÍCONES DA NAVBAR ---
+   ========================================================================== */
+
+.nav-link i {
+    font-size: 1.1rem;
+    vertical-align: -2px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover i {
+    color: var(--bs-primary);
+}
+
+.navbar-nav .nav-item {
+    margin-right: 5px;
+}
+
+/* ==========================================================================
    --- ESTILOS EXCLUSIVOS DA PÁGINA INICIAL (INDEX) ---
    ========================================================================== */
 
