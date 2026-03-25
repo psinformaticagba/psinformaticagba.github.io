@@ -186,18 +186,21 @@ title: "PSInformática - Planos de Suporte e Manutenção"
     </div>
 </section>
 
-<section id="servicos" class="bg-light">
+<section id="servicos" class="bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold">Serviços Inclusos no Contrato</h2>
+        <h2 class="text-center mb-5 fw-bold">{{ site.secao_servicos.titulo }}</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 text-start">
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-pc-display text-primary fs-3 mb-2 d-block"></i><h5>Sistemas</h5><p class="text-muted small">Instalação de Windows/Linux, Programas e correção de erros.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-shield-lock text-primary fs-3 mb-2 d-block"></i><h5>Segurança</h5><p class="text-muted small">Configuração de Servidores, Firewall e Antivírus Corporativo.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-router text-primary fs-3 mb-2 d-block"></i><h5>Redes Avançadas</h5><p class="text-muted small">Mikrotik, Failover (2 links), Load Balancing e Hotspot.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-printer text-primary fs-3 mb-2 d-block"></i><h5>Impressoras</h5><p class="text-muted small">Instalação, Reset, Pressurização de tintas e configuração de rede.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-tools text-primary fs-3 mb-2 d-block"></i><h5>Hardware</h5><p class="text-muted small">Troca de peças, upgrade de SSD e reparo em notebooks.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-headset text-primary fs-3 mb-2 d-block"></i><h5>Suporte Ágil</h5><p class="text-muted small">Suporte remoto imediato e presencial para usuários.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 border-primary border-top border-4 service-card"><i class="bi bi-cloud-arrow-up text-primary fs-3 mb-2 d-block"></i><h5>Backup e Nuvem</h5><p class="text-muted small">Rotinas de Backup automático para proteção de dados críticos.</p></div></div>
-            <div class="col"><div class="p-3 bg-white rounded shadow-sm h-100 service-card"><i class="bi bi-calendar-check text-primary fs-3 mb-2 d-block"></i><h5>Prevenção</h5><p class="text-muted small">Atualizações e limpezas periódicas para evitar paradas.</p></div></div>
+            
+            {% for servico in site.secao_servicos.itens %}
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card {% if servico.destaque %}border-primary border-top border-4{% endif %}">
+                    <i class="bi {{ servico.icone }} text-primary fs-3 mb-2 d-block"></i>
+                    <h5>{{ servico.titulo }}</h5>
+                    <p class="text-muted small">{{ servico.descricao }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
         </div>
     </div>
 </section>
