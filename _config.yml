@@ -102,13 +102,57 @@ tabela_comparativa:
     premium: true
     corporate: true
 
-# Tutorial de acesso Remoto
+# Tutorial de acesso Remoto (index)
 passo_1_titulo: "Baixe o Suporte"
 passo_1_desc: "Clique no botão e baixe nosso software de acesso remoto seguro."
 passo_2_titulo: "Informe o ID"
 passo_2_desc: "Abra o programa e nos envie o ID/Senha pelo WhatsApp."
 passo_3_titulo: "Pronto!"
 passo_3_desc: "Nossos técnicos assumem o controle e resolvem seu problema na hora."
+
+# Serviços Incluso no Contrato (index)
+secao_servicos:
+  titulo: "Serviços Inclusos no Contrato"
+  itens:
+    - titulo: "Sistemas"
+      icone: "bi-pc-display"
+      descricao: "Instalação de Windows/Linux, Programas e correção de erros."
+      destaque: false
+
+    - titulo: "Segurança"
+      icone: "bi-shield-lock"
+      descricao: "Configuração de Servidores, Firewall e Antivírus Corporativo."
+      destaque: false
+
+    - titulo: "Redes Avançadas"
+      icone: "bi-router"
+      descricao: "Mikrotik, Failover (2 links), Load Balancing e Hotspot."
+      destaque: false
+
+    - titulo: "Impressoras"
+      icone: "bi-printer"
+      descricao: "Instalação, Reset, Pressurização de tintas e configuração de rede."
+      destaque: true
+
+    - titulo: "Hardware"
+      icone: "bi-tools"
+      descricao: "Troca de peças, upgrade de SSD e reparo em notebooks."
+      destaque: false
+
+    - titulo: "Suporte Ágil"
+      icone: "bi-headset"
+      descricao: "Suporte remoto imediato e presencial para usuários."
+      destaque: false
+
+    - titulo: "Backup e Nuvem"
+      icone: "bi-cloud-arrow-up"
+      descricao: "Rotinas de Backup automático para proteção de dados críticos."
+      destaque: true
+
+    - titulo: "Prevenção"
+      icone: "bi-calendar-check"
+      descricao: "Atualizações e limpezas periódicas para evitar paradas."
+      destaque: false
 
 # Dados do Autor (Página Sobre)
 autor_nome: "Paulo Soares"
@@ -118,14 +162,14 @@ autor_formacao: "Graduado em Segurança da Informação e Pós-graduado em Defes
 missao: "Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios."
 valores: "Integridade, transparência e atualização constante frente às ameaças digitais modernas."
 
-# Redes Sociais
+# Redes Sociais 
 social_telegram: "https://t.me/soarespaullo"
 social_youtube: "https://www.youtube.com/psinformatica"
 social_linkedin: "https://linkedin.com/in/soarespaullo"
 social_github: "https://soarespaullo.github.io"
 social_blog: "https://soarespaullo.github.io/blog"
 
-# Lista de Skills
+# Lista de Skills (Página Sobre)
 autor_skills:
   - "Administrador de Sistemas"
   - "Cibersegurança"
@@ -134,7 +178,7 @@ autor_skills:
   - "Gestão de DNS/SSL"
   - "Segurança de Servidores"
 
-# Cards de Confiança
+# Cards de Confiança (Página Sobre)
 cards_confianca:
   - titulo: "Formação Sólida"
     icone: "bi-mortarboard"
@@ -176,7 +220,7 @@ data_clientes:
     icone: "emoji-smile"
     depoimento: "Atendimento nota 10! Sempre que precisamos de suporte, seja local ou remoto, somos atendidos com muita agilidade."
 
-# Lista de Serviços
+# Lista de Serviços (Página Serviços)
 data_servicos:
   - nome: "Suporte Técnico"
     icone: "person-gear"
