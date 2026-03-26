@@ -28,6 +28,29 @@ disclaimer_software: "Importante: Licenciamento de softwares (Windows, Office, A
 formsubmit_id: "43f726d7ce8df0d4cc2285ab4a7d73b0"
 url: "https://psinformaticagba.github.io" # Substitua pela URL real do seu site
 
+# Configuração do Carrosel (Banner Principal - index.html)
+carousel_slides:
+  - titulo: "Cibersegurança e Redes"
+    descricao: "Configuração de Firewall, VPN e gestão de servidores para sua empresa."
+    imagem: "/assets/img/banner-seguranca.jpg"
+    texto_botao: "Saiba Mais"
+    link_botao: "/servicos.html"
+    cor_botao: "btn-primary" # Azul
+
+  - titulo: "Manutenção Especializada"
+    descricao: "Upgrades de hardware e manutenção preventiva em computadores e notebooks."
+    imagem: "/assets/img/banner-manutencao.jpg"
+    texto_botao: "Ver Planos"
+    link_botao: "/planos.html"
+    cor_botao: "btn-warning fw-bold" # Amarelo
+
+  - titulo: "Suporte Remoto Imediato"
+    descricao: "Atendimento ágil para resolver seus problemas de software sem sair de casa."
+    imagem: "/assets/img/banner-suporte.jpg"
+    texto_botao: "Como Funciona?"
+    link_botao: "#suporte-remoto"
+    cor_botao: "btn-danger" # Vermelho
+
 # Preços dos Planos
 preco_plano_basico: "150"
 preco_plano_business: "250"
