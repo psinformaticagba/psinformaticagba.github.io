@@ -109,7 +109,7 @@ tabela_comparativa:
     business: false
     premium: true
     corporate: true
-  - recurso: "Relatórios Mensais de Desempenho"
+  - recurso: "Planejamento de Capacidade e Upgrade"
     basico: false
     business: false
     premium: true
