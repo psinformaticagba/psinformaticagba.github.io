@@ -51,6 +51,13 @@ carousel_slides:
     link_botao: "#suporte-remoto"
     cor_botao: "btn-danger" # Vermelho
 
+  - titulo: "Backup em Nuvem Privada (LibreCloud)"
+    descricao: "Proteja seus arquivos contra Ransomware e falhas de hardware com armazenamento criptografado e 100% sob seu controle."
+    imagem: "/assets/img/banner-backup.jpg"
+    texto_botao: "Saiba Mais"
+    link_botao: "/contato.html"
+    cor_botao: "btn-success" # Verde 
+
 # Preços dos Planos
 preco_plano_basico: "150"
 preco_plano_business: "250"
