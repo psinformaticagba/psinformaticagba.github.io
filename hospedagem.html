@@ -1,0 +1,83 @@
+---
+layout: default
+title: "Hospedagem de Sites - PSInformática"
+---
+
+<header class="page-header">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-white">{{ site.hospedagem_page.titulo_header }}</h1>
+        <p class="lead opacity-75">{{ site.hospedagem_page.subtitulo_header }}</p>
+    </div>
+</header>
+
+<section class="container py-5">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-sm overflow-hidden" style="border-radius: 20px;">
+                <img src="{{ site.hospedagem_page.banner_img | relative_url }}" alt="Hospedagem" class="img-fluid" style="object-fit: cover; min-height: 350px;">
+                <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-primary px-3 py-2 shadow-sm">OFERTA EXCLUSIVA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-start">
+            <h2 class="fw-bold mb-4">{{ site.hospedagem_page.principal_titulo }}</h2>
+            <p class="text-muted mb-4 fs-5">{{ site.hospedagem_page.principal_descricao }}</p>
+            
+            <div class="mb-5">
+                {% for item in site.hospedagem_page.beneficios_check %}
+                <div class="d-flex align-items-start mb-3">
+                    <i class="bi {{ item.icone }} text-primary fs-3 me-3"></i>
+                    <div>
+                        <h5 class="fw-bold mb-0">{{ item.titulo }}</h5>
+                        <p class="text-muted small">{{ item.sub }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <a href="{{ site.hospedagem_page.link_hostinger }}" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="btn btn-primary btn-lg px-5 py-3 fw-bold shadow-sm w-100 w-lg-auto">
+               <i class="bi bi-cart-check me-2"></i> GARANTIR DESCONTO AGORA
+            </a>
+            <p class="text-muted small mt-3 fst-italic">* Link de indicação com desconto aplicado automaticamente pela Hostinger.</p>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="bg-light py-5">
+    <div class="container">
+        <h3 class="text-center mb-5 fw-bold">{{ site.hospedagem_page.cards_titulo }}</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 text-start">
+            
+            {% for card in site.hospedagem_page.recursos_cards %}
+            <div class="col">
+                <div class="p-3 bg-white rounded shadow-sm h-100 service-card {% if card.destaque %}border-primary border-top border-4{% endif %}">
+                    <i class="bi {{ card.icone }} text-primary fs-3 mb-2 d-block"></i>
+                    <h5 class="fw-bold">{{ card.titulo }}</h5>
+                    <p class="text-muted small mb-0">{{ card.descricao }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="trust-banner-clean shadow-sm position-relative overflow-hidden p-5 text-center" style="border-radius: 20px;">
+        <div class="position-relative" style="z-index: 2;">
+            <h2 class="fw-bold mb-3 text-dark">{{ site.hospedagem_page.cta_titulo }}</h2>
+            <p class="lead opacity-75 mb-4 text-muted">{{ site.hospedagem_page.cta_sub }}</p>
+            <a href="{{ site.hospedagem_page.link_hostinger }}" 
+               target="_blank" 
+               class="btn btn-primary btn-lg px-5 py-2 fw-bold rounded-pill shadow-sm">
+                Ir para Hostinger <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+        <i class="bi bi-globe2 shield-watermark"></i>
+    </div>
+</section>

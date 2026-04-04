@@ -18,9 +18,16 @@ title: "PSInformática - Planos de Suporte e Manutenção"
             <div class="carousel-caption">
                 <h2 class="fw-bold">{{ slide.titulo }}</h2>
                 <p>{{ slide.descricao }}</p>
-                <a href="{{ slide.link_botao | relative_url }}" class="btn {{ slide.cor_botao }} px-4">
-                    {{ slide.texto_botao }}
-                </a>
+
+                {% if slide.externo %}
+                    <a href="{{ slide.link_botao }}" class="btn {{ slide.cor_botao }} px-4" target="_blank" rel="noopener noreferrer">
+                        {{ slide.texto_botao }} <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+                    </a>
+                {% else %}
+                    <a href="{{ slide.link_botao | relative_url }}" class="btn {{ slide.cor_botao }} px-4">
+                        {{ slide.texto_botao }}
+                    </a>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

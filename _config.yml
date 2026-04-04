@@ -36,6 +36,7 @@ carousel_slides:
     texto_botao: "Saiba Mais"
     link_botao: "/servicos.html"
     cor_botao: "btn-primary" # Azul
+    externo: false # Ativa a abertura em nova guia
 
   - titulo: "Manutenção Especializada"
     descricao: "Upgrades de hardware e manutenção preventiva em computadores e notebooks."
@@ -43,6 +44,7 @@ carousel_slides:
     texto_botao: "Ver Planos"
     link_botao: "/planos.html"
     cor_botao: "btn-warning fw-bold" # Amarelo
+    externo: false # Ativa a abertura em nova guia
 
   - titulo: "Suporte Remoto Imediato"
     descricao: "Atendimento ágil para resolver seus problemas de software sem sair de casa."
@@ -50,13 +52,23 @@ carousel_slides:
     texto_botao: "Como Funciona?"
     link_botao: "#suporte-remoto"
     cor_botao: "btn-danger" # Vermelho
+    externo: false # Ativa a abertura em nova guia
 
-  - titulo: "Backup em Nuvem Privada (LibreCloud)"
-    descricao: "Proteja seus arquivos contra Ransomware e falhas de hardware com armazenamento criptografado e 100% sob seu controle."
+  - titulo: "Nuvem Privada LibreCloud"
+    descricao: "Proteção contra Ransomware com armazenamento seguro e 100% sob seu controle."
     imagem: "/assets/img/banner-backup.jpg"
-    texto_botao: "Saiba Mais"
-    link_botao: "/contato.html"
+    texto_botao: "Ver Planos"
+    link_botao: "/nuvem.html"
     cor_botao: "btn-success" # Verde 
+    externo: false # Ativa a abertura em nova guia
+
+  - titulo: "Hospedagem de Sites"
+    descricao: "Alta performance com SSL grátis e suporte especializado para o seu site."
+    imagem: "/assets/img/banner-hospedagem.jpg"
+    texto_botao: "Aproveitar Oferta"
+    link_botao: "/hospedagem.html"
+    cor_botao: "btn-warning" # Verde
+    externo: false # Ativa a abertura em nova guia
 
 # Preços dos Planos
 preco_plano_basico: "150"
@@ -116,7 +128,7 @@ tabela_comparativa:
     business: false
     premium: true
     corporate: true
-  - recurso: "Planejamento de Capacidade e Upgrade"
+  - recurso: "Relatórios Mensais de Desempenho"
     basico: false
     business: false
     premium: true
@@ -132,7 +144,7 @@ tabela_comparativa:
     premium: true
     corporate: true
 
-# Tutorial de acesso Remoto (index)
+# Tutorial de acesso Remoto
 passo_1_titulo: "Baixe o Suporte"
 passo_1_desc: "Clique no botão e baixe nosso software de acesso remoto seguro."
 passo_2_titulo: "Informe o ID"
@@ -192,14 +204,14 @@ autor_formacao: "Graduado em Segurança da Informação e Pós-graduado em Defes
 missao: "Prover soluções tecnológicas resilientes, garantindo que nossos clientes foquem apenas no que importa: seus negócios."
 valores: "Integridade, transparência e atualização constante frente às ameaças digitais modernas."
 
-# Redes Sociais 
+# Redes Sociais
 social_telegram: "https://t.me/soarespaullo"
 social_youtube: "https://www.youtube.com/psinformatica"
 social_linkedin: "https://linkedin.com/in/soarespaullo"
 social_github: "https://soarespaullo.github.io"
 social_blog: "https://soarespaullo.github.io/blog"
 
-# Lista de Skills (Página Sobre)
+# Lista de Skills
 autor_skills:
   - "Administrador de Sistemas"
   - "Cibersegurança"
@@ -208,7 +220,7 @@ autor_skills:
   - "Gestão de DNS/SSL"
   - "Segurança de Servidores"
 
-# Cards de Confiança (Página Sobre)
+# Cards de Confiança
 cards_confianca:
   - titulo: "Formação Sólida"
     icone: "bi-mortarboard"
@@ -303,15 +315,15 @@ data_faqs:
 data_marcas:
   - nome: "ASUS"
     imagem: "asus.png"
-  - nome: "GIGABYTE"
+  - nome: "Gigabyte"
     imagem: "gigabyte.png"
   - nome: "EVGA"
     imagem: "evga.png"
-  - nome: "HYPERX"
+  - nome: "HyperX"
     imagem: "hyperx.png"
-  - nome: "CORSAIR"
+  - nome: "Corsair"
     imagem: "corsair.png"
-  - nome: "INTEL"
+  - nome: "Intel"
     imagem: "intel.png"
   - nome: "NVIDIA"
     imagem: "nvidia.png"
@@ -331,6 +343,167 @@ data_marcas:
     imagem: "seagate.png"
   - nome: "COOLER MASTER"
     imagem: "coolermaster.png"
+
+# Configurações da Nuvem LibreCloud
+librecloud_page:
+  titulo: "LibreCloud sua Nuvem Privada"
+  subtitulo: "Armazenamento seguro e 100% sob seu controle, livre de taxas abusivas."
+  
+  # Notas Importantes (Exibidas abaixo da tabela comparativa)
+  nota_conexao: "Importante: O valor do plano refere-se ao serviço de backup e armazenamento."
+  nota_usuarios: "Importante: A disponibilidade de acesso externo depende da estabilidade do link de internet local"
+
+  planos:
+    - nome: "Cloud Start"
+      categoria: "Ideal para Profissionais Liberais"
+      espaco: "100 GB"
+      preco: "9,90" 
+      destaque: false
+      texto_botao: "Solicitar Orçamento"
+      mensagem_whatsapp: "Olá! Quero saber mais sobre o LibreCloud Start."
+      recursos:
+        - "Backup Automático"
+        - "Acesso Mobile/Desktop"
+        - "Criptografia SSL/TLS"
+        - "Compartilhamento Seguro"
+
+    - nome: "Cloud Business"
+      categoria: "Para Pequenas e Médias Empresas"
+      espaco: "500 GB"
+      preco: "19,90" 
+      destaque: true
+      texto_botao: "Contratar Agora"
+      mensagem_whatsapp: "Olá! Quero o LibreCloud Business para minha empresa."
+      recursos:
+        - "Anti-Ransomware Ativo"
+        - "Múltiplos Usuários"
+        - "Histórico de Versões"
+        - "Suporte Prioritário"
+
+    - nome: "Cloud Premium"
+      categoria: "Solução Enterprise"
+      espaco: "1 TB"
+      preco: "29,90"
+      destaque: false
+      texto_botao: "Falar com Especialista"
+      mensagem_whatsapp: "Olá! Preciso de um projeto de nuvem personalizada."
+      recursos:
+        - "Servidor Dedicado"
+        - "Auditoria de Arquivos"
+        - "VPN Exclusiva"
+        - "Backup Off-site Extra"
+
+  tabela_comparativa:
+  - recurso: "Espaço de Armazenamento"
+    start: "100 GB"
+    business: "500 GB"
+    custom: "Sob Medida"
+  - recurso: "Proteção Anti-Ransomware"
+    start: true
+    business: true
+    custom: true
+  - recurso: "Snapshot de Dados (Versões)"
+    start: "7 Dias"
+    business: "30 Dias"
+    custom: "Personalizado"
+  - recurso: "Usuários com Acesso"
+    start: "01 Usuário"
+    business: "Até 10 Usuários"
+    custom: "Ilimitado"
+  - recurso: "Sincronização Desktop/Mobile"
+    start: true
+    business: true
+    custom: true
+  - recurso: "Criptografia Ponta-a-Ponta"
+    start: true
+    business: true
+    custom: true
+  - recurso: "Edição de Docs Online"
+    start: false
+    business: true
+    custom: true
+  - recurso: "Links de Compartilhamento"
+    start: true
+    business: true
+    custom: true
+  - recurso: "Backup Externo (Offsite)"
+    start: false
+    business: true
+    custom: true
+  - recurso: "Suporte e Monitoramento"
+    start: "Remoto"
+    business: "Prioritário"
+    custom: "24/7"
+
+  faq:
+    - pergunta: "Onde meus dados ficam armazenados?"
+      resposta: "Diferente de nuvens públicas, o LibreCloud utiliza infraestrutura dedicada, garantindo que você tenha a soberania total sobre a localização dos seus dados."
+    - pergunta: "O acesso é seguro fora da empresa?"
+      resposta: "Sim. Utilizamos criptografia de ponta a ponta e certificados SSL, permitindo acesso seguro via Web ou Aplicativo de qualquer lugar."
+    - pergunta: "O que acontece se um computador for infectado por Ransomware?"
+      resposta: "O LibreCloud possui histórico de versões. Mesmo que os arquivos locais sejam infectados, conseguimos restaurar as versões saudáveis gravadas na nuvem."
+    - pergunta: "É possível recuperar um arquivo deletado por engano?"
+      resposta: "Sim. O sistema mantém uma lixeira interna e versões anteriores, permitindo a recuperação rápida de dados excluídos acidentalmente."
+    - pergunta: "Consigo compartilhar arquivos com clientes externos?"
+      resposta: "Sim. Você pode criar links de compartilhamento protegidos por senha e com data de expiração para pessoas de fora da organização."
+
+  diferenciais:
+    - icone: "bi-hdd-fill"
+      titulo: "Soberania de Dados"
+      descricao: "Controle total sobre onde seus arquivos estão fisicamente armazenados."
+    - icone: "bi-lock-fill"
+      titulo: "Privacidade Total"
+      descricao: "Criptografia de nível bancário para proteger informações sensíveis."
+    - icone: "bi-lightning-charge-fill"
+      titulo: "Velocidade Local"
+      descricao: "Sincronização otimizada para o fluxo de trabalho da sua empresa."
+
+  # Configurações da Página de Hospedagem
+hospedagem_page:
+  titulo_header: "Hospedagem de Sites"
+  subtitulo_header: "Alta performance com SSL grátis e suporte especializado para o seu site."
+  
+  # Seção Principal
+  banner_img: "/assets/img/banner-hospedagem.jpg"
+  principal_titulo: "A base sólida que seu projeto precisa"
+  principal_descricao: "Não deixe seu site lento afastar clientes. Utilize uma infraestrutura otimizada com tecnologias de ponta, garantindo velocidade máxima e segurança total."
+  link_hostinger: "https://www.hostinger.com/br?REFERRALCODE=UQISOARESTS9"
+  
+  # Benefícios ao lado da imagem
+  beneficios_check:
+    - titulo: "Certificado SSL Grátis"
+      sub: "Criptografia de ponta para proteger os dados dos seus visitantes."
+      icone: "bi-shield-check"
+    - titulo: "Velocidade NVMe"
+      sub: "Armazenamento de última geração para carregamento instantâneo."
+      icone: "bi-lightning-charge"
+    - titulo: "Suporte Especializado"
+      sub: "Atendimento 24/7 para garantir que seu site nunca fique fora do ar."
+      icone: "bi-headset"
+
+  # Cards de Recursos (Tudo em um só lugar)
+  cards_titulo: "Tudo o que você precisa em um só lugar"
+  recursos_cards:
+    - titulo: "E-mail Profissional"
+      descricao: "Contas @seudominio inclusas no plano de hospedagem."
+      icone: "bi-envelope-at"
+      destaque: false 
+    - titulo: "WordPress Fácil"
+      descricao: "Instalação e otimização de performance em apenas um clique."
+      icone: "bi-wordpress"
+      destaque: true # Mude para false para remover a borda azul
+    - titulo: "Domínio Grátis"
+      descricao: "Ganhe 1 ano de registro de domínio no plano anual."
+      icone: "bi-globe"
+      destaque: false
+    - titulo: "Migração Grátis"
+      descricao: "Trazemos seu site de outro servidor sem custo adicional."
+      icone: "bi-arrow-repeat"
+      destaque: false
+
+  # Rodapé da página (CTA Final)
+  cta_titulo: "Pronto para colocar seu projeto online?"
+  cta_sub: "Aproveite a infraestrutura da Hostinger com suporte direto da nossa equipe."
 
 # Configurações do Jekyll
 plugins:
